@@ -1,16 +1,11 @@
 ﻿Imports System.Data.OleDb
-Imports System.Data.SqlClient
 
 Public Class Form1
 
-    Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\imafo\Documents\School\ICT3611\Assign6_Database\Rugby.accdb; Persist Security Info=False"
+    Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\imafo\Documents\School\ICT3611\Assign6_Database\Rugby.accdb;Persist Security Info=False"
     Dim connection As New OleDbConnection(connectionString)
 
-
-
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Try
             connection.Open()
         Catch ex As Exception
@@ -40,7 +35,7 @@ Public Class Form1
         reader.Close()
     End Sub
 
-    Private Sub ListBoxTeams_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbTeams5.SelectedIndexChanged
+    Private Sub lbTeams5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbTeams5.SelectedIndexChanged
         If lbTeams5.SelectedIndex <> -1 Then
             Dim selectedTeamName As String = lbTeams5.SelectedItem.ToString()
             DisplayPlayers(selectedTeamName)
@@ -66,7 +61,6 @@ Public Class Form1
         End Try
     End Sub
 
-
     Private Sub TabOne()
         'Tab Number One Queries
         Dim query As String = "Select * FROM Teams"
@@ -81,12 +75,9 @@ Public Class Form1
         End While
 
         reader.Close()
-
-
     End Sub
 
     Private Sub TabTwo()
-
         'Tab Number Two Queries
         Dim query As String = "SELECT Team, Stadium, AVG(Points * 1.0 / Games) AS AveragePoints FROM Teams GROUP BY Team, Stadium"
         Dim command As New OleDbCommand(query, connection)
@@ -116,6 +107,7 @@ Public Class Form1
 
         reader.Close()
     End Sub
+
     Private Sub TabFour()
         ' Tab Number Four Queries
         Dim query As String = "SELECT Player FROM Players WHERE (Points * 1.0 / Games) = (SELECT MAX(Points * 1.0 / Games) FROM Players)"
@@ -135,6 +127,7 @@ Public Class Form1
     Private Sub TabFive()
 
     End Sub
+
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
         If ListBox1.SelectedIndex <> -1 Then
             Dim selectedTeamName As String = ListBox1.SelectedItem.ToString()
@@ -163,8 +156,6 @@ Public Class Form1
         End If
     End Sub
 
-
-
     Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
         Application.Exit()
     End Sub
@@ -176,5 +167,4 @@ Public Class Form1
     Private Sub gDGV2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gDGV2.CellContentClick
 
     End Sub
-
 End Class
