@@ -49,6 +49,7 @@ Partial Class Form1
         No4 = New TabPage()
         lbHighAve4 = New ListBox()
         No5 = New TabPage()
+        Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         lbTeams5 = New ListBox()
         gDGVTeams5 = New Guna.UI2.WinForms.Guna2DataGridView()
@@ -69,7 +70,8 @@ Partial Class Form1
         Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2TabControl1.SuspendLayout()
         No1.SuspendLayout()
         No2.SuspendLayout()
@@ -258,6 +260,7 @@ Partial Class Form1
         ' 
         ' No3
         ' 
+        No3.Controls.Add(Guna2HtmlLabel5)
         No3.Controls.Add(lbHighScore3)
         No3.Location = New Point(4, 44)
         No3.Name = "No3"
@@ -271,13 +274,14 @@ Partial Class Form1
         ' 
         lbHighScore3.FormattingEnabled = True
         lbHighScore3.ItemHeight = 15
-        lbHighScore3.Location = New Point(3, 3)
+        lbHighScore3.Location = New Point(3, 33)
         lbHighScore3.Name = "lbHighScore3"
-        lbHighScore3.Size = New Size(667, 244)
+        lbHighScore3.Size = New Size(667, 214)
         lbHighScore3.TabIndex = 0
         ' 
         ' No4
         ' 
+        No4.Controls.Add(Guna2HtmlLabel4)
         No4.Controls.Add(lbHighAve4)
         No4.Location = New Point(4, 44)
         No4.Name = "No4"
@@ -291,9 +295,9 @@ Partial Class Form1
         ' 
         lbHighAve4.FormattingEnabled = True
         lbHighAve4.ItemHeight = 15
-        lbHighAve4.Location = New Point(3, 4)
+        lbHighAve4.Location = New Point(3, 34)
         lbHighAve4.Name = "lbHighAve4"
-        lbHighAve4.Size = New Size(667, 244)
+        lbHighAve4.Size = New Size(667, 214)
         lbHighAve4.TabIndex = 1
         ' 
         ' No5
@@ -309,6 +313,16 @@ Partial Class Form1
         No5.TabIndex = 9
         No5.Text = "No5"
         No5.UseVisualStyleBackColor = True
+        ' 
+        ' Guna2HtmlLabel3
+        ' 
+        Guna2HtmlLabel3.BackColor = Color.Transparent
+        Guna2HtmlLabel3.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel3.Location = New Point(459, 7)
+        Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+        Guna2HtmlLabel3.Size = New Size(111, 17)
+        Guna2HtmlLabel3.TabIndex = 5
+        Guna2HtmlLabel3.Text = "SARU Team Players"
         ' 
         ' Guna2HtmlLabel2
         ' 
@@ -564,15 +578,25 @@ Partial Class Form1
         Guna2HtmlLabel1.TabIndex = 3
         Guna2HtmlLabel1.Text = "SA RUGBY"
         ' 
-        ' Guna2HtmlLabel3
+        ' Guna2HtmlLabel4
         ' 
-        Guna2HtmlLabel3.BackColor = Color.Transparent
-        Guna2HtmlLabel3.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Guna2HtmlLabel3.Location = New Point(459, 7)
-        Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Guna2HtmlLabel3.Size = New Size(111, 17)
-        Guna2HtmlLabel3.TabIndex = 5
-        Guna2HtmlLabel3.Text = "SARU Team Players"
+        Guna2HtmlLabel4.BackColor = Color.Transparent
+        Guna2HtmlLabel4.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel4.Location = New Point(248, 11)
+        Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
+        Guna2HtmlLabel4.Size = New Size(153, 17)
+        Guna2HtmlLabel4.TabIndex = 6
+        Guna2HtmlLabel4.Text = "Players with Highest Points"
+        ' 
+        ' Guna2HtmlLabel5
+        ' 
+        Guna2HtmlLabel5.BackColor = Color.Transparent
+        Guna2HtmlLabel5.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel5.Location = New Point(245, 10)
+        Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
+        Guna2HtmlLabel5.Size = New Size(203, 17)
+        Guna2HtmlLabel5.TabIndex = 7
+        Guna2HtmlLabel5.Text = "Players with Highest Average Points"
         ' 
         ' Form1
         ' 
@@ -596,7 +620,9 @@ Partial Class Form1
         No2.ResumeLayout(False)
         CType(gDGV2, ComponentModel.ISupportInitialize).EndInit()
         No3.ResumeLayout(False)
+        No3.PerformLayout()
         No4.ResumeLayout(False)
+        No4.PerformLayout()
         No5.ResumeLayout(False)
         No5.PerformLayout()
         CType(gDGVTeams5, ComponentModel.ISupportInitialize).EndInit()
@@ -640,4 +666,6 @@ Partial Class Form1
     Friend WithEvents lbTeams5 As ListBox
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
