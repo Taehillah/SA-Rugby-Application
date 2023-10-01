@@ -46,7 +46,7 @@ Public Class Form1
         Dim query As String = "SELECT Player, AVG(Points * 1.0 / Games) AS AveragePoints " &
                               "FROM Players WHERE Team = @TeamName " &
                               "GROUP BY Player " &
-                              "ORDER BY AveragePoints DESC"
+                              "ORDER BY AVG(Points * 1.0 / Games) DESC"
 
         Dim command As New OleDbCommand(query, connection)
         command.Parameters.AddWithValue("@TeamName", teamName)
