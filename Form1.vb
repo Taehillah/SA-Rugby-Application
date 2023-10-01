@@ -18,6 +18,7 @@ Public Class Form1
         TabThree()
         TabFour()
         TabFive()
+        LoadAveragesAbove3()
     End Sub
 
     Private Sub LoadTeams()
@@ -150,6 +151,51 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub LoadAveragesAbove3()
+        Dim query As String = "SELECT DISTINCT AVG(Points * 1.0 / Games) AS AveragePoints " &
+                              "FROM Players " &
+                              "GROUP BY Player " &
+                              "HAVING AVG(Points * 1.0 / Games) > 3.0 " &
+                              "ORDER BY AVG(Points * 1.0 / Games) DESC"
+
+        Dim command As New OleDbCommand(query, connection)
+        Dim reader As OleDbDataReader = command.ExecuteReader()
+
+        lbAve3of6.Items.Clear()
+
+        While reader.Read()
+            Dim averagePoints As Double = CDbl(reader("AveragePoints"))
+            lbAve3of6.Items.Add(averagePoints.ToString("0.00"))
+        End While
+
+        reader.Close()
+    End Sub
+
+    Private Sub lbAve3of6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbAve3of6.SelectedIndexChanged
+        If lbAve3of6.SelectedIndex <> -1 Then
+            Dim selectedAverage As Double = CDbl(lbAve3of6.SelectedItem)
+            DisplayPlayersWithAverage(selectedAverage)
+        End If
+    End Sub
+
+    Private Sub DisplayPlayersWithAverage(average As Double)
+        Dim query As String = "SELECT Player, Team " &
+                              "FROM Players " &
+                              "WHERE (Points * 1.0 / Games) > @Average " &
+                              "ORDER BY Player"
+
+        Dim command As New OleDbCommand(query, connection)
+        command.Parameters.AddWithValue("@Average", average)
+        Dim adapter As New OleDbDataAdapter(command)
+        Dim dataTable As New DataTable()
+
+        Try
+            adapter.Fill(dataTable)
+            gDGVTeam6.DataSource = dataTable
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs)
         If connection.State = ConnectionState.Open Then
             connection.Close()
