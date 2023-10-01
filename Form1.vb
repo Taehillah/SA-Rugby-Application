@@ -227,15 +227,45 @@ Public Class Form1
         End If
     End Sub
 
+
+    Private Sub gCBtnTotal8_Click(sender As Object, e As EventArgs) Handles gCBtnTotal8.Click
+        Dim totalPoints As Integer = CalculateTotalPointsInCurrieCup()
+        gtxtTotalPts8.Text = totalPoints.ToString()
+    End Sub
+
+    Private Function CalculateTotalPointsInCurrieCup() As Integer
+        Dim query As String = "SELECT SUM(Points) AS TotalPoints " &
+                              "FROM Teams " &
+                              "WHERE League = 'Currie Cup'"
+
+        Dim command As New OleDbCommand(query, connection)
+
+        Try
+            Dim result As Object = command.ExecuteScalar()
+            If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                Return CInt(result)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
+        Return 0 ' Return 0 if there's an error or no result
+    End Function
+
     Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
         Application.Exit()
     End Sub
+
 
     Private Sub Guna2PictureBox2_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox2.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
     Private Sub gDGV2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gDGV2.CellContentClick
+
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
 
     End Sub
 End Class
