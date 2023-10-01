@@ -268,4 +268,8 @@ Public Class Form1
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
 
     End Sub
+
+    Private Sub gtxtTotalPts8_TextChanged(sender As Object, e As EventArgs) Handles gtxtTotalPts8.TextChanged
+
+    End Sub
 End Class
