@@ -196,6 +196,31 @@ Public Class Form1
             MessageBox.Show("Error: " & ex.Message)
         End Try
     End Sub
+
+    Private Sub gCBtn7_Click(sender As Object, e As EventArgs) Handles gCBtn7.Click
+        Dim averagePoints As Double = CalculateAveragePointsInCurrieCup()
+        gtxtPts7.Text = averagePoints.ToString("0.00")
+    End Sub
+
+    Private Function CalculateAveragePointsInCurrieCup() As Double
+        Dim query As String = "SELECT AVG(Points * 1.0 / Games) AS AveragePoints " &
+                              "FROM Players " &
+                              "WHERE Team IN (SELECT Team FROM Teams WHERE League = 'Currie Cup')"
+
+        Dim command As New OleDbCommand(query, connection)
+
+        Try
+            Dim result As Object = command.ExecuteScalar()
+            If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                Return CDbl(result)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
+        Return 0.0
+
+    End Function
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs)
         If connection.State = ConnectionState.Open Then
             connection.Close()
