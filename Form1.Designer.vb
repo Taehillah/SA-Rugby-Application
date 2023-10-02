@@ -1125,9 +1125,9 @@ Partial Class Form1
         Guna2HtmlLabel10.Font = New Font("Segoe UI", 9F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point)
         Guna2HtmlLabel10.Location = New Point(366, 29)
         Guna2HtmlLabel10.Name = "Guna2HtmlLabel10"
-        Guna2HtmlLabel10.Size = New Size(82, 17)
+        Guna2HtmlLabel10.Size = New Size(140, 17)
         Guna2HtmlLabel10.TabIndex = 14
-        Guna2HtmlLabel10.Text = "League Teams"
+        Guna2HtmlLabel10.Text = "Players beyond 40 Points"
         ' 
         ' Guna2HtmlLabel11
         ' 
