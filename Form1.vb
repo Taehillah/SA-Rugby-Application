@@ -252,6 +252,30 @@ Public Class Form1
         Return 0 ' Return 0 if there's an error or no result
     End Function
 
+    Private Sub gCBtnPlayers9_Click(sender As Object, e As EventArgs) Handles gCBtnPlayers9.Click
+        Dim playerCount As Integer = CountCurrieCupPlayers()
+        gtxtPlayers9.Text = playerCount.ToString()
+    End Sub
+
+    Private Function CountCurrieCupPlayers() As Integer
+        Dim query As String = "SELECT COUNT(*) AS PlayerCount " &
+                              "FROM Players P " &
+                              "WHERE EXISTS (SELECT 1 FROM Teams T WHERE T.Team = P.Team AND T.League = 'Currie Cup')"
+
+        Dim command As New OleDbCommand(query, connection)
+
+        Try
+            Dim result As Object = command.ExecuteScalar()
+            If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                Return CInt(result)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
+        Return 0 ' Return 0 if there's an error or no result
+    End Function
+
     Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
         Application.Exit()
     End Sub
