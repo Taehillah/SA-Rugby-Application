@@ -23,31 +23,34 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle13 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         Guna2TabControl1 = New Guna.UI2.WinForms.Guna2TabControl()
         No1 = New TabPage()
@@ -83,6 +86,9 @@ Partial Class Form1
         gCBtnTotal8 = New Guna.UI2.WinForms.Guna2CircleButton()
         gtxtTotalPts8 = New Guna.UI2.WinForms.Guna2TextBox()
         No9 = New TabPage()
+        lblNoPlayers = New Label()
+        gCBtnPlayers9 = New Guna.UI2.WinForms.Guna2CircleButton()
+        gtxtPlayers9 = New Guna.UI2.WinForms.Guna2TextBox()
         No10 = New TabPage()
         No11 = New TabPage()
         No12 = New TabPage()
@@ -96,9 +102,9 @@ Partial Class Form1
         Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        lblNoPlayers = New Label()
-        gCBtnPlayers9 = New Guna.UI2.WinForms.Guna2CircleButton()
-        gtxtPlayers9 = New Guna.UI2.WinForms.Guna2TextBox()
+        Label5 = New Label()
+        Guna2CircleButton1 = New Guna.UI2.WinForms.Guna2CircleButton()
+        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2TabControl1.SuspendLayout()
         No1.SuspendLayout()
         No2.SuspendLayout()
@@ -112,6 +118,7 @@ Partial Class Form1
         No7.SuspendLayout()
         No8.SuspendLayout()
         No9.SuspendLayout()
+        No10.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -238,43 +245,43 @@ Partial Class Form1
         ' gDGV2
         ' 
         gDGV2.AllowUserToResizeRows = False
-        DataGridViewCellStyle13.BackColor = Color.White
-        DataGridViewCellStyle13.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle13.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle13.SelectionBackColor = Color.Silver
-        DataGridViewCellStyle13.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        gDGV2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.BackColor = Color.White
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = Color.Silver
+        DataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        gDGV2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         gDGV2.Anchor = AnchorStyles.None
-        DataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
-        DataGridViewCellStyle14.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle14.ForeColor = Color.White
-        DataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
-        DataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = DataGridViewTriState.True
-        gDGV2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        gDGV2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         gDGV2.ColumnHeadersHeight = 17
         gDGV2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = Color.White
-        DataGridViewCellStyle15.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle15.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle15.SelectionBackColor = Color.Silver
-        DataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle15.WrapMode = DataGridViewTriState.False
-        gDGV2.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = Color.White
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.SelectionBackColor = Color.Silver
+        DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+        gDGV2.DefaultCellStyle = DataGridViewCellStyle3
         gDGV2.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         gDGV2.Location = New Point(3, -1)
         gDGV2.Name = "gDGV2"
         gDGV2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle16.BackColor = Color.White
-        DataGridViewCellStyle16.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle16.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle16.SelectionBackColor = Color.White
-        DataGridViewCellStyle16.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle16.WrapMode = DataGridViewTriState.True
-        gDGV2.RowHeadersDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = Color.White
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = Color.White
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        gDGV2.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         gDGV2.RowHeadersVisible = False
         gDGV2.RowTemplate.Height = 25
         gDGV2.Size = New Size(664, 249)
@@ -409,43 +416,43 @@ Partial Class Form1
         ' gDGVTeams5
         ' 
         gDGVTeams5.AllowUserToResizeRows = False
-        DataGridViewCellStyle17.BackColor = Color.White
-        DataGridViewCellStyle17.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle17.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle17.SelectionBackColor = Color.Silver
-        DataGridViewCellStyle17.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        gDGVTeams5.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle5.BackColor = Color.White
+        DataGridViewCellStyle5.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle5.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = Color.Silver
+        DataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        gDGVTeams5.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         gDGVTeams5.Anchor = AnchorStyles.None
-        DataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
-        DataGridViewCellStyle18.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle18.ForeColor = Color.White
-        DataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
-        DataGridViewCellStyle18.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = DataGridViewTriState.True
-        gDGVTeams5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
+        DataGridViewCellStyle6.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle6.ForeColor = Color.White
+        DataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
+        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
+        gDGVTeams5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         gDGVTeams5.ColumnHeadersHeight = 17
         gDGVTeams5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle19.BackColor = Color.White
-        DataGridViewCellStyle19.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle19.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle19.SelectionBackColor = Color.Silver
-        DataGridViewCellStyle19.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle19.WrapMode = DataGridViewTriState.False
-        gDGVTeams5.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = Color.White
+        DataGridViewCellStyle7.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle7.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle7.SelectionBackColor = Color.Silver
+        DataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle7.WrapMode = DataGridViewTriState.False
+        gDGVTeams5.DefaultCellStyle = DataGridViewCellStyle7
         gDGVTeams5.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         gDGVTeams5.Location = New Point(312, 30)
         gDGVTeams5.Name = "gDGVTeams5"
         gDGVTeams5.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle20.BackColor = Color.White
-        DataGridViewCellStyle20.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle20.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle20.SelectionBackColor = Color.White
-        DataGridViewCellStyle20.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle20.WrapMode = DataGridViewTriState.True
-        gDGVTeams5.RowHeadersDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = Color.White
+        DataGridViewCellStyle8.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle8.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = Color.White
+        DataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = DataGridViewTriState.True
+        gDGVTeams5.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         gDGVTeams5.RowHeadersVisible = False
         gDGVTeams5.RowTemplate.Height = 25
         gDGVTeams5.Size = New Size(349, 214)
@@ -518,43 +525,43 @@ Partial Class Form1
         ' gDGVTeam6
         ' 
         gDGVTeam6.AllowUserToResizeRows = False
-        DataGridViewCellStyle21.BackColor = Color.White
-        DataGridViewCellStyle21.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle21.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle21.SelectionBackColor = Color.Silver
-        DataGridViewCellStyle21.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        gDGVTeam6.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle9.BackColor = Color.White
+        DataGridViewCellStyle9.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle9.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle9.SelectionBackColor = Color.Silver
+        DataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        gDGVTeam6.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
         gDGVTeam6.Anchor = AnchorStyles.None
-        DataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle22.BackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
-        DataGridViewCellStyle22.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle22.ForeColor = Color.White
-        DataGridViewCellStyle22.SelectionBackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
-        DataGridViewCellStyle22.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle22.WrapMode = DataGridViewTriState.True
-        gDGVTeam6.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
+        DataGridViewCellStyle10.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle10.ForeColor = Color.White
+        DataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
+        DataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = DataGridViewTriState.True
+        gDGVTeam6.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         gDGVTeam6.ColumnHeadersHeight = 17
         gDGVTeam6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle23.BackColor = Color.White
-        DataGridViewCellStyle23.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle23.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle23.SelectionBackColor = Color.Silver
-        DataGridViewCellStyle23.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle23.WrapMode = DataGridViewTriState.False
-        gDGVTeam6.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = Color.White
+        DataGridViewCellStyle11.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle11.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle11.SelectionBackColor = Color.Silver
+        DataGridViewCellStyle11.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.False
+        gDGVTeam6.DefaultCellStyle = DataGridViewCellStyle11
         gDGVTeam6.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         gDGVTeam6.Location = New Point(313, 31)
         gDGVTeam6.Name = "gDGVTeam6"
         gDGVTeam6.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle24.BackColor = Color.White
-        DataGridViewCellStyle24.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle24.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle24.SelectionBackColor = Color.White
-        DataGridViewCellStyle24.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle24.WrapMode = DataGridViewTriState.True
-        gDGVTeam6.RowHeadersDefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = Color.White
+        DataGridViewCellStyle12.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle12.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = Color.White
+        DataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.True
+        gDGVTeam6.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         gDGVTeam6.RowHeadersVisible = False
         gDGVTeam6.RowTemplate.Height = 25
         gDGVTeam6.Size = New Size(349, 214)
@@ -617,7 +624,7 @@ Partial Class Form1
         gCBtn7.HoverState.FillColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
         gCBtn7.Location = New Point(485, 64)
         gCBtn7.Name = "gCBtn7"
-        gCBtn7.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        gCBtn7.ShadowDecoration.CustomizableEdges = CustomizableEdges1
         gCBtn7.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         gCBtn7.Size = New Size(73, 71)
         gCBtn7.TabIndex = 1
@@ -626,7 +633,7 @@ Partial Class Form1
         ' gtxtPts7
         ' 
         gtxtPts7.BorderColor = Color.DimGray
-        gtxtPts7.CustomizableEdges = CustomizableEdges15
+        gtxtPts7.CustomizableEdges = CustomizableEdges2
         gtxtPts7.DefaultText = ""
         gtxtPts7.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         gtxtPts7.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -640,7 +647,7 @@ Partial Class Form1
         gtxtPts7.PasswordChar = ChrW(0)
         gtxtPts7.PlaceholderText = ""
         gtxtPts7.SelectedText = ""
-        gtxtPts7.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        gtxtPts7.ShadowDecoration.CustomizableEdges = CustomizableEdges3
         gtxtPts7.Size = New Size(251, 36)
         gtxtPts7.TabIndex = 0
         ' 
@@ -680,7 +687,7 @@ Partial Class Form1
         gCBtnTotal8.HoverState.FillColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
         gCBtnTotal8.Location = New Point(495, 55)
         gCBtnTotal8.Name = "gCBtnTotal8"
-        gCBtnTotal8.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        gCBtnTotal8.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         gCBtnTotal8.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         gCBtnTotal8.Size = New Size(73, 71)
         gCBtnTotal8.TabIndex = 4
@@ -689,7 +696,7 @@ Partial Class Form1
         ' gtxtTotalPts8
         ' 
         gtxtTotalPts8.BorderColor = Color.DimGray
-        gtxtTotalPts8.CustomizableEdges = CustomizableEdges18
+        gtxtTotalPts8.CustomizableEdges = CustomizableEdges5
         gtxtTotalPts8.DefaultText = ""
         gtxtTotalPts8.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         gtxtTotalPts8.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -703,7 +710,7 @@ Partial Class Form1
         gtxtTotalPts8.PasswordChar = ChrW(0)
         gtxtTotalPts8.PlaceholderText = ""
         gtxtTotalPts8.SelectedText = ""
-        gtxtTotalPts8.ShadowDecoration.CustomizableEdges = CustomizableEdges19
+        gtxtTotalPts8.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         gtxtTotalPts8.Size = New Size(251, 36)
         gtxtTotalPts8.TabIndex = 3
         ' 
@@ -720,8 +727,61 @@ Partial Class Form1
         No9.Text = "No9"
         No9.UseVisualStyleBackColor = True
         ' 
+        ' lblNoPlayers
+        ' 
+        lblNoPlayers.AutoSize = True
+        lblNoPlayers.Location = New Point(78, 100)
+        lblNoPlayers.Name = "lblNoPlayers"
+        lblNoPlayers.Size = New Size(140, 15)
+        lblNoPlayers.TabIndex = 8
+        lblNoPlayers.Text = "No of Currie Cup Players:"
+        ' 
+        ' gCBtnPlayers9
+        ' 
+        gCBtnPlayers9.BackgroundImageLayout = ImageLayout.Stretch
+        gCBtnPlayers9.CustomBorderColor = Color.FromArgb(CByte(255), CByte(255), CByte(128))
+        gCBtnPlayers9.DisabledState.BorderColor = Color.DarkGray
+        gCBtnPlayers9.DisabledState.CustomBorderColor = Color.DarkGray
+        gCBtnPlayers9.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        gCBtnPlayers9.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        gCBtnPlayers9.FillColor = Color.FromArgb(CByte(255), CByte(179), CByte(2))
+        gCBtnPlayers9.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        gCBtnPlayers9.ForeColor = Color.White
+        gCBtnPlayers9.HoverState.FillColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
+        gCBtnPlayers9.Location = New Point(520, 67)
+        gCBtnPlayers9.Name = "gCBtnPlayers9"
+        gCBtnPlayers9.ShadowDecoration.CustomizableEdges = CustomizableEdges7
+        gCBtnPlayers9.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        gCBtnPlayers9.Size = New Size(73, 71)
+        gCBtnPlayers9.TabIndex = 7
+        gCBtnPlayers9.Text = "No of Players"
+        ' 
+        ' gtxtPlayers9
+        ' 
+        gtxtPlayers9.BorderColor = Color.DimGray
+        gtxtPlayers9.CustomizableEdges = CustomizableEdges8
+        gtxtPlayers9.DefaultText = ""
+        gtxtPlayers9.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        gtxtPlayers9.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        gtxtPlayers9.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        gtxtPlayers9.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        gtxtPlayers9.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        gtxtPlayers9.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        gtxtPlayers9.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        gtxtPlayers9.Location = New Point(224, 91)
+        gtxtPlayers9.Name = "gtxtPlayers9"
+        gtxtPlayers9.PasswordChar = ChrW(0)
+        gtxtPlayers9.PlaceholderText = ""
+        gtxtPlayers9.SelectedText = ""
+        gtxtPlayers9.ShadowDecoration.CustomizableEdges = CustomizableEdges9
+        gtxtPlayers9.Size = New Size(251, 36)
+        gtxtPlayers9.TabIndex = 6
+        ' 
         ' No10
         ' 
+        No10.Controls.Add(Label5)
+        No10.Controls.Add(Guna2CircleButton1)
+        No10.Controls.Add(Guna2TextBox1)
         No10.Location = New Point(4, 44)
         No10.Name = "No10"
         No10.Padding = New Padding(3)
@@ -810,14 +870,14 @@ Partial Class Form1
         Guna2PictureBox1.BackColor = Color.Transparent
         Guna2PictureBox1.BackgroundImage = CType(resources.GetObject("Guna2PictureBox1.BackgroundImage"), Image)
         Guna2PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges22
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges15
         Guna2PictureBox1.ErrorImage = Nothing
         Guna2PictureBox1.FillColor = Color.Transparent
         Guna2PictureBox1.ImageRotate = 0F
         Guna2PictureBox1.InitialImage = Nothing
         Guna2PictureBox1.Location = New Point(757, 12)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges23
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2PictureBox1.Size = New Size(13, 12)
         Guna2PictureBox1.TabIndex = 1
         Guna2PictureBox1.TabStop = False
@@ -827,14 +887,14 @@ Partial Class Form1
         Guna2PictureBox2.BackColor = Color.Transparent
         Guna2PictureBox2.BackgroundImage = CType(resources.GetObject("Guna2PictureBox2.BackgroundImage"), Image)
         Guna2PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        Guna2PictureBox2.CustomizableEdges = CustomizableEdges20
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges13
         Guna2PictureBox2.ErrorImage = Nothing
         Guna2PictureBox2.FillColor = Color.Transparent
         Guna2PictureBox2.ImageRotate = 0F
         Guna2PictureBox2.InitialImage = Nothing
         Guna2PictureBox2.Location = New Point(724, 12)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges21
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         Guna2PictureBox2.Size = New Size(16, 24)
         Guna2PictureBox2.TabIndex = 2
         Guna2PictureBox2.TabStop = False
@@ -849,55 +909,55 @@ Partial Class Form1
         Guna2HtmlLabel1.TabIndex = 3
         Guna2HtmlLabel1.Text = "SA RUGBY"
         ' 
-        ' lblNoPlayers
+        ' Label5
         ' 
-        lblNoPlayers.AutoSize = True
-        lblNoPlayers.Location = New Point(78, 100)
-        lblNoPlayers.Name = "lblNoPlayers"
-        lblNoPlayers.Size = New Size(140, 15)
-        lblNoPlayers.TabIndex = 8
-        lblNoPlayers.Text = "No of Currie Cup Players:"
+        Label5.AutoSize = True
+        Label5.Location = New Point(70, 99)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(148, 15)
+        Label5.TabIndex = 11
+        Label5.Text = "No of Bloem Team Players:"
         ' 
-        ' gCBtnPlayers9
+        ' Guna2CircleButton1
         ' 
-        gCBtnPlayers9.BackgroundImageLayout = ImageLayout.Stretch
-        gCBtnPlayers9.CustomBorderColor = Color.FromArgb(CByte(255), CByte(255), CByte(128))
-        gCBtnPlayers9.DisabledState.BorderColor = Color.DarkGray
-        gCBtnPlayers9.DisabledState.CustomBorderColor = Color.DarkGray
-        gCBtnPlayers9.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        gCBtnPlayers9.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        gCBtnPlayers9.FillColor = Color.FromArgb(CByte(255), CByte(179), CByte(2))
-        gCBtnPlayers9.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        gCBtnPlayers9.ForeColor = Color.White
-        gCBtnPlayers9.HoverState.FillColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
-        gCBtnPlayers9.Location = New Point(520, 67)
-        gCBtnPlayers9.Name = "gCBtnPlayers9"
-        gCBtnPlayers9.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        gCBtnPlayers9.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        gCBtnPlayers9.Size = New Size(73, 71)
-        gCBtnPlayers9.TabIndex = 7
-        gCBtnPlayers9.Text = "No of Players"
+        Guna2CircleButton1.BackgroundImageLayout = ImageLayout.Stretch
+        Guna2CircleButton1.CustomBorderColor = Color.FromArgb(CByte(255), CByte(255), CByte(128))
+        Guna2CircleButton1.DisabledState.BorderColor = Color.DarkGray
+        Guna2CircleButton1.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2CircleButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2CircleButton1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2CircleButton1.FillColor = Color.FromArgb(CByte(255), CByte(179), CByte(2))
+        Guna2CircleButton1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2CircleButton1.ForeColor = Color.White
+        Guna2CircleButton1.HoverState.FillColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
+        Guna2CircleButton1.Location = New Point(520, 66)
+        Guna2CircleButton1.Name = "Guna2CircleButton1"
+        Guna2CircleButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Guna2CircleButton1.Size = New Size(73, 71)
+        Guna2CircleButton1.TabIndex = 10
+        Guna2CircleButton1.Text = "No of Players"
         ' 
-        ' gtxtPlayers9
+        ' Guna2TextBox1
         ' 
-        gtxtPlayers9.BorderColor = Color.DimGray
-        gtxtPlayers9.CustomizableEdges = CustomizableEdges25
-        gtxtPlayers9.DefaultText = ""
-        gtxtPlayers9.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        gtxtPlayers9.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        gtxtPlayers9.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        gtxtPlayers9.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        gtxtPlayers9.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        gtxtPlayers9.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        gtxtPlayers9.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        gtxtPlayers9.Location = New Point(224, 91)
-        gtxtPlayers9.Name = "gtxtPlayers9"
-        gtxtPlayers9.PasswordChar = ChrW(0)
-        gtxtPlayers9.PlaceholderText = ""
-        gtxtPlayers9.SelectedText = ""
-        gtxtPlayers9.ShadowDecoration.CustomizableEdges = CustomizableEdges26
-        gtxtPlayers9.Size = New Size(251, 36)
-        gtxtPlayers9.TabIndex = 6
+        Guna2TextBox1.BorderColor = Color.DimGray
+        Guna2TextBox1.CustomizableEdges = CustomizableEdges11
+        Guna2TextBox1.DefaultText = ""
+        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2TextBox1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2TextBox1.Location = New Point(224, 90)
+        Guna2TextBox1.Name = "Guna2TextBox1"
+        Guna2TextBox1.PasswordChar = ChrW(0)
+        Guna2TextBox1.PlaceholderText = ""
+        Guna2TextBox1.SelectedText = ""
+        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2TextBox1.Size = New Size(251, 36)
+        Guna2TextBox1.TabIndex = 9
         ' 
         ' Form1
         ' 
@@ -936,6 +996,8 @@ Partial Class Form1
         No8.PerformLayout()
         No9.ResumeLayout(False)
         No9.PerformLayout()
+        No10.ResumeLayout(False)
+        No10.PerformLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
@@ -992,4 +1054,7 @@ Partial Class Form1
     Friend WithEvents lblNoPlayers As Label
     Friend WithEvents gCBtnPlayers9 As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents gtxtPlayers9 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Guna2CircleButton1 As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
 End Class
