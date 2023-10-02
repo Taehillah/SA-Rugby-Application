@@ -13,6 +13,7 @@ Public Class Form1
         End Try
 
         LoadTeams()
+        LoadLeagues()
         TabOne()
         TabTwo()
         TabThree()
@@ -408,6 +409,58 @@ Public Class Form1
             For Each row As DataRow In dataTable.Rows
                 Dim playerName As String = row("Player").ToString()
                 glbPoints13.Items.Add(playerName)
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub LoadLeagues()
+        ' Add Currie Cup and SA Rugby as available leagues to the combo box
+        gcbLeague14.Items.Add("Currie Cup")
+        gcbLeague14.Items.Add("SA Rugby")
+        gcbLeague14.SelectedIndex = 0 ' Set default selection to Currie Cup
+    End Sub
+
+    Private Sub btnFilterPlayers_Click(sender As Object, e As EventArgs) Handles btnFilterPlayers14.Click
+        ' Validate the input points average
+        Dim pointsAverage As Double
+        If Not Double.TryParse(gtxtPtsAvg14.Text, pointsAverage) Then
+            MessageBox.Show("Invalid points average. Please enter a valid number.")
+            Return
+        End If
+
+        ' Check if points average is within the valid range (0 to 10)
+        If pointsAverage < 0 OrElse pointsAverage > 10 Then
+            MessageBox.Show("Points average must be between 0 and 10.")
+            Return
+        End If
+
+        ' Get the selected league
+        Dim selectedLeague As String = gcbLeague14.SelectedItem.ToString()
+
+        ' Query to retrieve players with points average greater than the given value
+        Dim query As String = "SELECT Player " &
+                              "FROM Players " &
+                              "WHERE Team IN (SELECT Team FROM Teams WHERE League = @League) " &
+                              "GROUP BY Player " &
+                              "HAVING AVG(Points * 1.0 / Games) > @PointsAverage " &
+                              "ORDER BY SUM(Points) DESC"
+
+        Dim command As New OleDbCommand(query, connection)
+        command.Parameters.AddWithValue("@League", selectedLeague)
+        command.Parameters.AddWithValue("@PointsAverage", pointsAverage)
+
+        Dim adapter As New OleDbDataAdapter(command)
+        Dim dataTable As New DataTable()
+
+        Try
+            adapter.Fill(dataTable)
+            glbPlayers14.Items.Clear()
+
+            For Each row As DataRow In dataTable.Rows
+                Dim playerName As String = row("Player").ToString()
+                glbPlayers14.Items.Add(playerName)
             Next
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
