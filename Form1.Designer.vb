@@ -51,6 +51,10 @@ Partial Class Form1
         Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle13 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         Guna2TabControl1 = New Guna.UI2.WinForms.Guna2TabControl()
         No1 = New TabPage()
@@ -107,6 +111,7 @@ Partial Class Form1
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         gRBtnSARugby11 = New Guna.UI2.WinForms.Guna2RadioButton()
+        gDGVTeams11 = New Guna.UI2.WinForms.Guna2DataGridView()
         Guna2TabControl1.SuspendLayout()
         No1.SuspendLayout()
         No2.SuspendLayout()
@@ -124,6 +129,7 @@ Partial Class Form1
         No11.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(gDGVTeams11, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Guna2TabControl1
@@ -845,6 +851,7 @@ Partial Class Form1
         ' 
         ' No11
         ' 
+        No11.Controls.Add(gDGVTeams11)
         No11.Controls.Add(gRBtnSARugby11)
         No11.Controls.Add(gRBtnCurrieCup11)
         No11.Location = New Point(4, 44)
@@ -866,7 +873,7 @@ Partial Class Form1
         gRBtnCurrieCup11.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(179), CByte(2))
         gRBtnCurrieCup11.FlatStyle = FlatStyle.System
         gRBtnCurrieCup11.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        gRBtnCurrieCup11.Location = New Point(89, 75)
+        gRBtnCurrieCup11.Location = New Point(94, 92)
         gRBtnCurrieCup11.Name = "gRBtnCurrieCup11"
         gRBtnCurrieCup11.Size = New Size(88, 20)
         gRBtnCurrieCup11.TabIndex = 0
@@ -996,7 +1003,7 @@ Partial Class Form1
         gRBtnSARugby11.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(255), CByte(179), CByte(2))
         gRBtnSARugby11.FlatStyle = FlatStyle.System
         gRBtnSARugby11.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        gRBtnSARugby11.Location = New Point(89, 126)
+        gRBtnSARugby11.Location = New Point(94, 143)
         gRBtnSARugby11.Name = "gRBtnSARugby11"
         gRBtnSARugby11.Size = New Size(82, 20)
         gRBtnSARugby11.TabIndex = 1
@@ -1005,6 +1012,72 @@ Partial Class Form1
         gRBtnSARugby11.UncheckedState.BorderThickness = 2
         gRBtnSARugby11.UncheckedState.FillColor = Color.Transparent
         gRBtnSARugby11.UncheckedState.InnerColor = Color.Transparent
+        ' 
+        ' gDGVTeams11
+        ' 
+        gDGVTeams11.AllowUserToResizeRows = False
+        DataGridViewCellStyle13.BackColor = Color.White
+        DataGridViewCellStyle13.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle13.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle13.SelectionBackColor = Color.Silver
+        DataGridViewCellStyle13.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        gDGVTeams11.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        gDGVTeams11.Anchor = AnchorStyles.None
+        DataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
+        DataGridViewCellStyle14.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle14.ForeColor = Color.White
+        DataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
+        DataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = DataGridViewTriState.True
+        gDGVTeams11.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        gDGVTeams11.ColumnHeadersHeight = 17
+        gDGVTeams11.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        DataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = Color.White
+        DataGridViewCellStyle15.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle15.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle15.SelectionBackColor = Color.Silver
+        DataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle15.WrapMode = DataGridViewTriState.False
+        gDGVTeams11.DefaultCellStyle = DataGridViewCellStyle15
+        gDGVTeams11.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        gDGVTeams11.Location = New Point(247, 20)
+        gDGVTeams11.Name = "gDGVTeams11"
+        gDGVTeams11.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = Color.White
+        DataGridViewCellStyle16.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle16.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle16.SelectionBackColor = Color.White
+        DataGridViewCellStyle16.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = DataGridViewTriState.True
+        gDGVTeams11.RowHeadersDefaultCellStyle = DataGridViewCellStyle16
+        gDGVTeams11.RowHeadersVisible = False
+        gDGVTeams11.RowTemplate.Height = 25
+        gDGVTeams11.Size = New Size(349, 214)
+        gDGVTeams11.TabIndex = 7
+        gDGVTeams11.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        gDGVTeams11.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        gDGVTeams11.ThemeStyle.AlternatingRowsStyle.ForeColor = SystemColors.ControlText
+        gDGVTeams11.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        gDGVTeams11.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        gDGVTeams11.ThemeStyle.BackColor = Color.White
+        gDGVTeams11.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        gDGVTeams11.ThemeStyle.HeaderStyle.BackColor = Color.Silver
+        gDGVTeams11.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+        gDGVTeams11.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        gDGVTeams11.ThemeStyle.HeaderStyle.ForeColor = Color.White
+        gDGVTeams11.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        gDGVTeams11.ThemeStyle.HeaderStyle.Height = 17
+        gDGVTeams11.ThemeStyle.ReadOnly = False
+        gDGVTeams11.ThemeStyle.RowsStyle.BackColor = Color.White
+        gDGVTeams11.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        gDGVTeams11.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        gDGVTeams11.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        gDGVTeams11.ThemeStyle.RowsStyle.Height = 25
+        gDGVTeams11.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        gDGVTeams11.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
         ' Form1
         ' 
@@ -1049,6 +1122,7 @@ Partial Class Form1
         No11.PerformLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(gDGVTeams11, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -1108,4 +1182,5 @@ Partial Class Form1
     Friend WithEvents gtxtBloem10 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents gRBtnCurrieCup11 As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents gRBtnSARugby11 As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents gDGVTeams11 As Guna.UI2.WinForms.Guna2DataGridView
 End Class
