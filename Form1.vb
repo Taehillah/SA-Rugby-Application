@@ -437,4 +437,14 @@ Public Class Form1
     Private Sub gtxtTotalPts8_TextChanged(sender As Object, e As EventArgs) Handles gtxtTotalPts8.TextChanged
 
     End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles glbPlayerHG16.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+    End Sub
+
+    Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs) Handles gCBtnHighPts16.Click
+    End Sub
 End Class
