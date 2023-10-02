@@ -27,13 +27,16 @@ Public Class Form1
         Dim reader As OleDbDataReader = command.ExecuteReader()
 
         lbTeams5.Items.Clear()
+        glbSARUs13.Items.Clear() 'just added
 
         While reader.Read()
             Dim teamName As String = reader("Team").ToString()
             lbTeams5.Items.Add(teamName)
+            glbSARUs13.Items.Add(teamName) 'just added
         End While
 
         reader.Close()
+
     End Sub
 
     Private Sub lbTeams5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbTeams5.SelectedIndexChanged
@@ -357,6 +360,60 @@ Public Class Form1
             MessageBox.Show("Error: " & ex.Message)
         End Try
     End Sub
+
+
+
+    Private Sub glbSARUs13_SelectedIndexChanged(sender As Object, e As EventArgs) Handles glbSARUs13.SelectedIndexChanged
+        If glbSARUs13.SelectedIndex <> -1 Then
+            Dim selectedTeamName As String = glbSARUs13.SelectedItem.ToString()
+            DisplayPlayersAboveTeamAverage(selectedTeamName)
+        End If
+    End Sub
+
+    Private Sub DisplayPlayersAboveTeamAverage(teamName As String)
+        ' First, get the team's points average
+        Dim teamAverageQuery As String = "SELECT AVG(Points * 1.0 / Games) AS TeamAverage FROM Players WHERE Team = @TeamName"
+        Dim teamAverageCommand As New OleDbCommand(teamAverageQuery, connection)
+        teamAverageCommand.Parameters.AddWithValue("@TeamName", teamName)
+
+        Dim teamAverage As Double = 0.0
+
+        Try
+            Dim result As Object = teamAverageCommand.ExecuteScalar()
+            If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                teamAverage = CDbl(result)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+
+        ' Then, get players whose points average is greater than the team's points average
+        Dim query As String = "SELECT Player, AVG(Points * 1.0 / Games) AS PlayerAverage " &
+                              "FROM Players WHERE Team = @TeamName " &
+                              "GROUP BY Player " &
+                              "HAVING AVG(Points * 1.0 / Games) > @TeamAverage " &
+                              "ORDER BY AVG(Points * 1.0 / Games) DESC"
+
+        Dim command As New OleDbCommand(query, connection)
+        command.Parameters.AddWithValue("@TeamName", teamName)
+        command.Parameters.AddWithValue("@TeamAverage", teamAverage)
+
+        Dim adapter As New OleDbDataAdapter(command)
+        Dim dataTable As New DataTable()
+
+        Try
+            adapter.Fill(dataTable)
+            glbPoints13.Items.Clear()
+
+            For Each row As DataRow In dataTable.Rows
+                Dim playerName As String = row("Player").ToString()
+                glbPoints13.Items.Add(playerName)
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
+
     Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
         Application.Exit()
     End Sub
