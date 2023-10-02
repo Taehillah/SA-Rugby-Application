@@ -300,7 +300,7 @@ Public Class Form1
         Return 0 ' Return 0 if there's an error or no result
     End Function
 
-    Private Sub RadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles gRBtnCurrieCup11.CheckedChanged, gRBtnSARugby11.CheckedChanged
+    Private Sub RadioButton_CheckedChanged11(sender As Object, e As EventArgs) Handles gRBtnCurrieCup11.CheckedChanged, gRBtnSARugby11.CheckedChanged
         If gRBtnCurrieCup11.Checked Then
             DisplayTeamsByLeague("Currie Cup")
         ElseIf gRBtnSARugby11.Checked Then
@@ -323,6 +323,36 @@ Public Class Form1
         Try
             adapter.Fill(dataTable)
             gDGVTeams11.DataSource = dataTable
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub RadioButton_CheckedChanged12(sender As Object, e As EventArgs) Handles gRBtnCurrieCup12.CheckedChanged, gRBtnSARugby12.CheckedChanged
+        If gRBtnCurrieCup12.Checked Then
+            DisplayPlayers("Currie Cup", 40)
+        ElseIf gRBtnSARugby12.Checked Then
+            DisplayPlayers("SA Rugby", 40)
+        End If
+    End Sub
+
+    Private Sub DisplayPlayers(league As String, minPoints As Integer)
+        Dim query As String = "SELECT Players.Player, Players.Points, Teams.Stadium, AVG(Players.Points * 1.0 / Players.Games) AS AveragePoints " &
+                              "FROM Players " &
+                              "INNER JOIN Teams ON Players.Team = Teams.Team " &
+                              "WHERE Teams.League = @League AND Players.Points > @MinPoints " &
+                              "GROUP BY Players.Player, Players.Points, Teams.Stadium " &
+         "ORDER BY AVG(Players.Points * 1.0 / Players.Games) DESC"
+
+        Dim command As New OleDbCommand(query, connection)
+        command.Parameters.AddWithValue("@League", league)
+        command.Parameters.AddWithValue("@MinPoints", minPoints)
+        Dim adapter As New OleDbDataAdapter(command)
+        Dim dataTable As New DataTable()
+
+        Try
+            adapter.Fill(dataTable)
+            gDGVForty12.DataSource = dataTable
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
