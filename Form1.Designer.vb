@@ -51,14 +51,14 @@ Partial Class Form1
         Dim DataGridViewCellStyle14 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle15 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle16 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim DataGridViewCellStyle17 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle18 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle19 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle20 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         Guna2TabControl1 = New Guna.UI2.WinForms.Guna2TabControl()
         No1 = New TabPage()
@@ -108,6 +108,11 @@ Partial Class Form1
         gRBtnSARugby11 = New Guna.UI2.WinForms.Guna2RadioButton()
         gRBtnCurrieCup11 = New Guna.UI2.WinForms.Guna2RadioButton()
         No12 = New TabPage()
+        Guna2HtmlLabel10 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        gDGVForty12 = New Guna.UI2.WinForms.Guna2DataGridView()
+        gRBtnSARugby12 = New Guna.UI2.WinForms.Guna2RadioButton()
+        gRBtnCurrieCup12 = New Guna.UI2.WinForms.Guna2RadioButton()
         No13 = New TabPage()
         No14 = New TabPage()
         No15 = New TabPage()
@@ -118,11 +123,10 @@ Partial Class Form1
         Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel10 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        gDGVForty12 = New Guna.UI2.WinForms.Guna2DataGridView()
-        gRBtnSARugby12 = New Guna.UI2.WinForms.Guna2RadioButton()
-        gRBtnCurrieCup12 = New Guna.UI2.WinForms.Guna2RadioButton()
+        lblPlayers13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        glbSARUs13 = New ListBox()
+        Guna2HtmlLabel12 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        glbPoints13 = New ListBox()
         Guna2TabControl1.SuspendLayout()
         No1.SuspendLayout()
         No2.SuspendLayout()
@@ -140,9 +144,10 @@ Partial Class Form1
         No11.SuspendLayout()
         CType(gDGVTeams11, ComponentModel.ISupportInitialize).BeginInit()
         No12.SuspendLayout()
+        CType(gDGVForty12, ComponentModel.ISupportInitialize).BeginInit()
+        No13.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(gDGVForty12, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Guna2TabControl1
@@ -1020,105 +1025,6 @@ Partial Class Form1
         No12.Text = "No12"
         No12.UseVisualStyleBackColor = True
         ' 
-        ' No13
-        ' 
-        No13.Location = New Point(4, 44)
-        No13.Name = "No13"
-        No13.Padding = New Padding(3)
-        No13.Size = New Size(672, 252)
-        No13.TabIndex = 17
-        No13.Text = "No13"
-        No13.UseVisualStyleBackColor = True
-        ' 
-        ' No14
-        ' 
-        No14.Location = New Point(4, 44)
-        No14.Name = "No14"
-        No14.Padding = New Padding(3)
-        No14.Size = New Size(672, 252)
-        No14.TabIndex = 18
-        No14.Text = "No14"
-        No14.UseVisualStyleBackColor = True
-        ' 
-        ' No15
-        ' 
-        No15.Location = New Point(4, 44)
-        No15.Name = "No15"
-        No15.Padding = New Padding(3)
-        No15.Size = New Size(672, 252)
-        No15.TabIndex = 19
-        No15.Text = "No15"
-        No15.UseVisualStyleBackColor = True
-        ' 
-        ' No16
-        ' 
-        No16.Location = New Point(4, 44)
-        No16.Name = "No16"
-        No16.Padding = New Padding(3)
-        No16.Size = New Size(672, 252)
-        No16.TabIndex = 20
-        No16.Text = "No16"
-        No16.UseVisualStyleBackColor = True
-        ' 
-        ' Guna2Elipse1
-        ' 
-        Guna2Elipse1.BorderRadius = 10
-        Guna2Elipse1.TargetControl = Me
-        ' 
-        ' Guna2DragControl1
-        ' 
-        Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
-        Guna2DragControl1.TargetControl = Me
-        Guna2DragControl1.UseTransparentDrag = True
-        ' 
-        ' Guna2ShadowForm1
-        ' 
-        Guna2ShadowForm1.TargetForm = Me
-        ' 
-        ' Guna2PictureBox1
-        ' 
-        Guna2PictureBox1.BackColor = Color.Transparent
-        Guna2PictureBox1.BackgroundImage = CType(resources.GetObject("Guna2PictureBox1.BackgroundImage"), Image)
-        Guna2PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges15
-        Guna2PictureBox1.ErrorImage = Nothing
-        Guna2PictureBox1.FillColor = Color.Transparent
-        Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.InitialImage = Nothing
-        Guna2PictureBox1.Location = New Point(757, 12)
-        Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        Guna2PictureBox1.Size = New Size(13, 12)
-        Guna2PictureBox1.TabIndex = 1
-        Guna2PictureBox1.TabStop = False
-        ' 
-        ' Guna2PictureBox2
-        ' 
-        Guna2PictureBox2.BackColor = Color.Transparent
-        Guna2PictureBox2.BackgroundImage = CType(resources.GetObject("Guna2PictureBox2.BackgroundImage"), Image)
-        Guna2PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        Guna2PictureBox2.CustomizableEdges = CustomizableEdges13
-        Guna2PictureBox2.ErrorImage = Nothing
-        Guna2PictureBox2.FillColor = Color.Transparent
-        Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.InitialImage = Nothing
-        Guna2PictureBox2.Location = New Point(724, 12)
-        Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        Guna2PictureBox2.Size = New Size(16, 24)
-        Guna2PictureBox2.TabIndex = 2
-        Guna2PictureBox2.TabStop = False
-        ' 
-        ' Guna2HtmlLabel1
-        ' 
-        Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Guna2HtmlLabel1.Location = New Point(60, 39)
-        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(96, 27)
-        Guna2HtmlLabel1.TabIndex = 3
-        Guna2HtmlLabel1.Text = "SA RUGBY"
-        ' 
         ' Guna2HtmlLabel10
         ' 
         Guna2HtmlLabel10.BackColor = Color.Transparent
@@ -1247,6 +1153,147 @@ Partial Class Form1
         gRBtnCurrieCup12.UncheckedState.FillColor = Color.Transparent
         gRBtnCurrieCup12.UncheckedState.InnerColor = Color.Transparent
         ' 
+        ' No13
+        ' 
+        No13.Controls.Add(Guna2HtmlLabel12)
+        No13.Controls.Add(glbPoints13)
+        No13.Controls.Add(lblPlayers13)
+        No13.Controls.Add(glbSARUs13)
+        No13.Location = New Point(4, 44)
+        No13.Name = "No13"
+        No13.Padding = New Padding(3)
+        No13.Size = New Size(672, 252)
+        No13.TabIndex = 17
+        No13.Text = "No13"
+        No13.UseVisualStyleBackColor = True
+        ' 
+        ' No14
+        ' 
+        No14.Location = New Point(4, 44)
+        No14.Name = "No14"
+        No14.Padding = New Padding(3)
+        No14.Size = New Size(672, 252)
+        No14.TabIndex = 18
+        No14.Text = "No14"
+        No14.UseVisualStyleBackColor = True
+        ' 
+        ' No15
+        ' 
+        No15.Location = New Point(4, 44)
+        No15.Name = "No15"
+        No15.Padding = New Padding(3)
+        No15.Size = New Size(672, 252)
+        No15.TabIndex = 19
+        No15.Text = "No15"
+        No15.UseVisualStyleBackColor = True
+        ' 
+        ' No16
+        ' 
+        No16.Location = New Point(4, 44)
+        No16.Name = "No16"
+        No16.Padding = New Padding(3)
+        No16.Size = New Size(672, 252)
+        No16.TabIndex = 20
+        No16.Text = "No16"
+        No16.UseVisualStyleBackColor = True
+        ' 
+        ' Guna2Elipse1
+        ' 
+        Guna2Elipse1.BorderRadius = 10
+        Guna2Elipse1.TargetControl = Me
+        ' 
+        ' Guna2DragControl1
+        ' 
+        Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Guna2DragControl1.TargetControl = Me
+        Guna2DragControl1.UseTransparentDrag = True
+        ' 
+        ' Guna2ShadowForm1
+        ' 
+        Guna2ShadowForm1.TargetForm = Me
+        ' 
+        ' Guna2PictureBox1
+        ' 
+        Guna2PictureBox1.BackColor = Color.Transparent
+        Guna2PictureBox1.BackgroundImage = CType(resources.GetObject("Guna2PictureBox1.BackgroundImage"), Image)
+        Guna2PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges15
+        Guna2PictureBox1.ErrorImage = Nothing
+        Guna2PictureBox1.FillColor = Color.Transparent
+        Guna2PictureBox1.ImageRotate = 0F
+        Guna2PictureBox1.InitialImage = Nothing
+        Guna2PictureBox1.Location = New Point(757, 12)
+        Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2PictureBox1.Size = New Size(13, 12)
+        Guna2PictureBox1.TabIndex = 1
+        Guna2PictureBox1.TabStop = False
+        ' 
+        ' Guna2PictureBox2
+        ' 
+        Guna2PictureBox2.BackColor = Color.Transparent
+        Guna2PictureBox2.BackgroundImage = CType(resources.GetObject("Guna2PictureBox2.BackgroundImage"), Image)
+        Guna2PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges13
+        Guna2PictureBox2.ErrorImage = Nothing
+        Guna2PictureBox2.FillColor = Color.Transparent
+        Guna2PictureBox2.ImageRotate = 0F
+        Guna2PictureBox2.InitialImage = Nothing
+        Guna2PictureBox2.Location = New Point(724, 12)
+        Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        Guna2PictureBox2.Size = New Size(16, 24)
+        Guna2PictureBox2.TabIndex = 2
+        Guna2PictureBox2.TabStop = False
+        ' 
+        ' Guna2HtmlLabel1
+        ' 
+        Guna2HtmlLabel1.BackColor = Color.Transparent
+        Guna2HtmlLabel1.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel1.Location = New Point(60, 39)
+        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Guna2HtmlLabel1.Size = New Size(96, 27)
+        Guna2HtmlLabel1.TabIndex = 3
+        Guna2HtmlLabel1.Text = "SA RUGBY"
+        ' 
+        ' lblPlayers13
+        ' 
+        lblPlayers13.BackColor = Color.Transparent
+        lblPlayers13.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        lblPlayers13.Location = New Point(146, 9)
+        lblPlayers13.Name = "lblPlayers13"
+        lblPlayers13.Size = New Size(91, 17)
+        lblPlayers13.TabIndex = 10
+        lblPlayers13.Text = "All SARU Teams"
+        ' 
+        ' glbSARUs13
+        ' 
+        glbSARUs13.FormattingEnabled = True
+        glbSARUs13.ItemHeight = 15
+        glbSARUs13.Location = New Point(49, 32)
+        glbSARUs13.Name = "glbSARUs13"
+        glbSARUs13.Size = New Size(289, 214)
+        glbSARUs13.TabIndex = 9
+        ' 
+        ' Guna2HtmlLabel12
+        ' 
+        Guna2HtmlLabel12.BackColor = Color.Transparent
+        Guna2HtmlLabel12.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel12.Location = New Point(441, 9)
+        Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
+        Guna2HtmlLabel12.Size = New Size(109, 17)
+        Guna2HtmlLabel12.TabIndex = 12
+        Guna2HtmlLabel12.Text = "Greater Avg Points"
+        ' 
+        ' glbPoints13
+        ' 
+        glbPoints13.FormattingEnabled = True
+        glbPoints13.ItemHeight = 15
+        glbPoints13.Location = New Point(344, 32)
+        glbPoints13.Name = "glbPoints13"
+        glbPoints13.Size = New Size(289, 214)
+        glbPoints13.TabIndex = 11
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1291,9 +1338,11 @@ Partial Class Form1
         CType(gDGVTeams11, ComponentModel.ISupportInitialize).EndInit()
         No12.ResumeLayout(False)
         No12.PerformLayout()
+        CType(gDGVForty12, ComponentModel.ISupportInitialize).EndInit()
+        No13.ResumeLayout(False)
+        No13.PerformLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(gDGVForty12, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -1361,4 +1410,8 @@ Partial Class Form1
     Friend WithEvents gDGVForty12 As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents gRBtnSARugby12 As Guna.UI2.WinForms.Guna2RadioButton
     Friend WithEvents gRBtnCurrieCup12 As Guna.UI2.WinForms.Guna2RadioButton
+    Friend WithEvents lblPlayers13 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents glbSARUs13 As ListBox
+    Friend WithEvents Guna2HtmlLabel12 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents glbPoints13 As ListBox
 End Class
