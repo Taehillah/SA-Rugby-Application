@@ -71,11 +71,11 @@ Public Class Form1
         Dim command As New OleDbCommand(query, connection)
         Dim reader As OleDbDataReader = command.ExecuteReader()
 
-        ListBox1.Items.Clear()
+        glbHighAvg15.Items.Clear()
 
         While reader.Read()
             Dim teamName As String = reader("Team").ToString()
-            ListBox1.Items.Add(teamName)
+            glbHighAvg15.Items.Add(teamName)
         End While
 
         reader.Close()
@@ -132,9 +132,9 @@ Public Class Form1
 
     End Sub
 
-    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
-        If ListBox1.SelectedIndex <> -1 Then
-            Dim selectedTeamName As String = ListBox1.SelectedItem.ToString()
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles glbHighAvg15.SelectedIndexChanged
+        If glbHighAvg15.SelectedIndex <> -1 Then
+            Dim selectedTeamName As String = glbHighAvg15.SelectedItem.ToString()
             Dim query As String = "SELECT Stadium FROM Teams WHERE Team = @TeamName"
             Dim command As New OleDbCommand(query, connection)
             command.Parameters.AddWithValue("@TeamName", selectedTeamName)
@@ -414,32 +414,8 @@ Public Class Form1
         End Try
     End Sub
 
-    'Tab 15
-    Private Sub gCBtnDisplay15_Click(sender As Object, e As EventArgs) Handles gCBtnDisplay15.Click
-        Dim highestAverage As Double = GetHighestCurrieCupAverage()
-        gtxtHighAvg15.Text = highestAverage.ToString("0.00")
-    End Sub
 
-    Private Function GetHighestCurrieCupAverage() As Double
-        Dim query As String = "SELECT MAX(AveragePoints) AS HighestAverage " &
-                          "FROM (SELECT AVG(Points * 1.0 / Games) AS AveragePoints " &
-                          "      FROM Players " &
-                          "      WHERE Team IN (SELECT Team FROM Teams WHERE League = 'Currie Cup') " &
-                          "      GROUP BY Player) AS Subquery"
 
-        Dim command As New OleDbCommand(query, connection)
-
-        Try
-            Dim result As Object = command.ExecuteScalar()
-            If result IsNot Nothing AndAlso Not IsDBNull(result) Then
-                Return CDbl(result)
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-        End Try
-
-        Return 0.0
-    End Function
 
     Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
         Application.Exit()
