@@ -299,6 +299,34 @@ Public Class Form1
 
         Return 0 ' Return 0 if there's an error or no result
     End Function
+
+    Private Sub RadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles gRBtnCurrieCup11.CheckedChanged, gRBtnSARugby11.CheckedChanged
+        If gRBtnCurrieCup11.Checked Then
+            DisplayTeamsByLeague("Currie Cup")
+        ElseIf gRBtnSARugby11.Checked Then
+            DisplayTeamsByLeague("SA Rugby")
+        End If
+    End Sub
+
+    Private Sub DisplayTeamsByLeague(league As String)
+        Dim query As String = "SELECT Team, AVG(Points * 1.0 / Games) AS AveragePoints " &
+                              "FROM Teams " &
+                              "WHERE League = @League " &
+                              "GROUP BY Team " &
+                              "ORDER BY AVG(Points * 1.0 / Games) DESC"
+
+        Dim command As New OleDbCommand(query, connection)
+        command.Parameters.AddWithValue("@League", league)
+        Dim adapter As New OleDbDataAdapter(command)
+        Dim dataTable As New DataTable()
+
+        Try
+            adapter.Fill(dataTable)
+            gDGVTeams11.DataSource = dataTable
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
     Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
         Application.Exit()
     End Sub
