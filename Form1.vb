@@ -273,7 +273,7 @@ Public Class Form1
             MessageBox.Show("Error: " & ex.Message)
         End Try
 
-        Return 0 ' Return 0 if there's an error or no result
+        Return 0 'If there are errors, the function returns 0
     End Function
 
     Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
