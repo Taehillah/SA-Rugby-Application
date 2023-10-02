@@ -103,7 +103,7 @@ Partial Class Form1
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Label5 = New Label()
-        Guna2CircleButton1 = New Guna.UI2.WinForms.Guna2CircleButton()
+        gCBtnBloem10 = New Guna.UI2.WinForms.Guna2CircleButton()
         gtxtBloem10 = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2TabControl1.SuspendLayout()
         No1.SuspendLayout()
@@ -780,7 +780,7 @@ Partial Class Form1
         ' No10
         ' 
         No10.Controls.Add(Label5)
-        No10.Controls.Add(Guna2CircleButton1)
+        No10.Controls.Add(gCBtnBloem10)
         No10.Controls.Add(gtxtBloem10)
         No10.Location = New Point(4, 44)
         No10.Name = "No10"
@@ -918,25 +918,25 @@ Partial Class Form1
         Label5.TabIndex = 11
         Label5.Text = "No of Bloem Team Players:"
         ' 
-        ' Guna2CircleButton1
+        ' gCBtnBloem10
         ' 
-        Guna2CircleButton1.BackgroundImageLayout = ImageLayout.Stretch
-        Guna2CircleButton1.CustomBorderColor = Color.FromArgb(CByte(255), CByte(255), CByte(128))
-        Guna2CircleButton1.DisabledState.BorderColor = Color.DarkGray
-        Guna2CircleButton1.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2CircleButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2CircleButton1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2CircleButton1.FillColor = Color.FromArgb(CByte(255), CByte(179), CByte(2))
-        Guna2CircleButton1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Guna2CircleButton1.ForeColor = Color.White
-        Guna2CircleButton1.HoverState.FillColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
-        Guna2CircleButton1.Location = New Point(520, 66)
-        Guna2CircleButton1.Name = "Guna2CircleButton1"
-        Guna2CircleButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges30
-        Guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Guna2CircleButton1.Size = New Size(73, 71)
-        Guna2CircleButton1.TabIndex = 10
-        Guna2CircleButton1.Text = "No of Players"
+        gCBtnBloem10.BackgroundImageLayout = ImageLayout.Stretch
+        gCBtnBloem10.CustomBorderColor = Color.FromArgb(CByte(255), CByte(255), CByte(128))
+        gCBtnBloem10.DisabledState.BorderColor = Color.DarkGray
+        gCBtnBloem10.DisabledState.CustomBorderColor = Color.DarkGray
+        gCBtnBloem10.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        gCBtnBloem10.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        gCBtnBloem10.FillColor = Color.FromArgb(CByte(255), CByte(179), CByte(2))
+        gCBtnBloem10.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        gCBtnBloem10.ForeColor = Color.White
+        gCBtnBloem10.HoverState.FillColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
+        gCBtnBloem10.Location = New Point(520, 66)
+        gCBtnBloem10.Name = "gCBtnBloem10"
+        gCBtnBloem10.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        gCBtnBloem10.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        gCBtnBloem10.Size = New Size(73, 71)
+        gCBtnBloem10.TabIndex = 10
+        gCBtnBloem10.Text = "No of Players"
         ' 
         ' gtxtBloem10
         ' 
@@ -1055,6 +1055,6 @@ Partial Class Form1
     Friend WithEvents gCBtnPlayers9 As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents gtxtPlayers9 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Guna2CircleButton1 As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents gCBtnBloem10 As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents gtxtBloem10 As Guna.UI2.WinForms.Guna2TextBox
 End Class
