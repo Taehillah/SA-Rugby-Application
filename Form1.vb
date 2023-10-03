@@ -476,8 +476,8 @@ Public Class Form1
             ' Define a query to fetch players who meet the criteria
             Dim query As String = "SELECT Player FROM Players " &
                                   "WHERE Team IN (SELECT Team FROM Teams WHERE League = @League) " &
-                                  "AND (Points * 1.0 / Games) > @AveragePoints "
-            '   "ORDER BY Player"
+                                  "AND (Points * 1.0 / Games) > @AveragePoints " &
+              "ORDER BY Player"
 
             Dim command As New OleDbCommand(query, connection)
             command.Parameters.AddWithValue("@League", selectedLeague)
@@ -505,8 +505,10 @@ Public Class Form1
 
 
     'Tab15
+    'The code below takes the player(s) with the highest average points
+    'I enclosed the code inside the tab 15 button as an event handler
     Private Sub gCBtnDisplay15_Click(sender As Object, e As EventArgs) Handles gCBtnDisplay15.Click
-        ' Define a query to fetch the player(s) with the highest points in the Currie Cup
+
         Dim query As String = "SELECT Player, MAX(Points) AS HighestPoints " &
                               "FROM Players " &
                               "WHERE Team IN (SELECT Team FROM Teams WHERE League = 'Currie Cup') " &
@@ -531,8 +533,10 @@ Public Class Form1
     End Sub
 
     'Tab16
+    'The code below takes the player with the highest points in the SA Rugby league
+    'I enclose the code inside the tab 16 button and an event handler
     Private Sub gCBtnHighPts16_Click(sender As Object, e As EventArgs) Handles gCBtnHighPts16.Click
-        ' Define a query to fetch the player(s) with the highest points in the SA Rugby League
+
         Dim query As String = "SELECT Player, MAX(Points) AS HighestPoints " &
                               "FROM Players " &
                               "WHERE Team IN (SELECT Team FROM Teams WHERE League = 'SA Rugby') " &
