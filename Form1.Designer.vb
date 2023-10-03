@@ -60,11 +60,11 @@ Partial Class Form1
         Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         Guna2TabControl1 = New Guna.UI2.WinForms.Guna2TabControl()
@@ -127,9 +127,8 @@ Partial Class Form1
         glbSARUs13 = New ListBox()
         No14 = New TabPage()
         Guna2HtmlLabel15 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel14 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        glbl14 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         gbtnCalculate14 = New Guna.UI2.WinForms.Guna2CircleButton()
-        gtxtPtsAvg14 = New Guna.UI2.WinForms.Guna2TextBox()
         gcbLeague14 = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         glbPlayers14 = New ListBox()
@@ -138,15 +137,16 @@ Partial Class Form1
         lblPlayer15 = New Label()
         gCBtnDisplay15 = New Guna.UI2.WinForms.Guna2CircleButton()
         No16 = New TabPage()
+        glbPlayerHG16 = New ListBox()
+        Label6 = New Label()
+        gCBtnHighPts16 = New Guna.UI2.WinForms.Guna2CircleButton()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(components)
         Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(components)
         Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        glbPlayerHG16 = New ListBox()
-        Label6 = New Label()
-        gCBtnHighPts16 = New Guna.UI2.WinForms.Guna2CircleButton()
+        gcbAvgPts14 = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2TabControl1.SuspendLayout()
         No1.SuspendLayout()
         No2.SuspendLayout()
@@ -1230,10 +1230,10 @@ Partial Class Form1
         ' 
         ' No14
         ' 
+        No14.Controls.Add(gcbAvgPts14)
         No14.Controls.Add(Guna2HtmlLabel15)
-        No14.Controls.Add(Guna2HtmlLabel14)
+        No14.Controls.Add(glbl14)
         No14.Controls.Add(gbtnCalculate14)
-        No14.Controls.Add(gtxtPtsAvg14)
         No14.Controls.Add(gcbLeague14)
         No14.Controls.Add(Guna2HtmlLabel13)
         No14.Controls.Add(glbPlayers14)
@@ -1255,15 +1255,15 @@ Partial Class Form1
         Guna2HtmlLabel15.TabIndex = 17
         Guna2HtmlLabel15.Text = "Choose League:"
         ' 
-        ' Guna2HtmlLabel14
+        ' glbl14
         ' 
-        Guna2HtmlLabel14.BackColor = Color.Transparent
-        Guna2HtmlLabel14.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Guna2HtmlLabel14.Location = New Point(62, 32)
-        Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
-        Guna2HtmlLabel14.Size = New Size(73, 17)
-        Guna2HtmlLabel14.TabIndex = 16
-        Guna2HtmlLabel14.Text = "Enter Points:"
+        glbl14.BackColor = Color.Transparent
+        glbl14.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        glbl14.Location = New Point(62, 32)
+        glbl14.Name = "glbl14"
+        glbl14.Size = New Size(73, 17)
+        glbl14.TabIndex = 16
+        glbl14.Text = "Enter Points:"
         ' 
         ' gbtnCalculate14
         ' 
@@ -1285,30 +1285,10 @@ Partial Class Form1
         gbtnCalculate14.TabIndex = 15
         gbtnCalculate14.Text = "Submit"
         ' 
-        ' gtxtPtsAvg14
-        ' 
-        gtxtPtsAvg14.CustomizableEdges = CustomizableEdges37
-        gtxtPtsAvg14.DefaultText = ""
-        gtxtPtsAvg14.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        gtxtPtsAvg14.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        gtxtPtsAvg14.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        gtxtPtsAvg14.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        gtxtPtsAvg14.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        gtxtPtsAvg14.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        gtxtPtsAvg14.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        gtxtPtsAvg14.Location = New Point(62, 79)
-        gtxtPtsAvg14.Name = "gtxtPtsAvg14"
-        gtxtPtsAvg14.PasswordChar = ChrW(0)
-        gtxtPtsAvg14.PlaceholderText = ""
-        gtxtPtsAvg14.SelectedText = ""
-        gtxtPtsAvg14.ShadowDecoration.CustomizableEdges = CustomizableEdges38
-        gtxtPtsAvg14.Size = New Size(103, 36)
-        gtxtPtsAvg14.TabIndex = 14
-        ' 
         ' gcbLeague14
         ' 
         gcbLeague14.BackColor = Color.Transparent
-        gcbLeague14.CustomizableEdges = CustomizableEdges39
+        gcbLeague14.CustomizableEdges = CustomizableEdges37
         gcbLeague14.DrawMode = DrawMode.OwnerDrawFixed
         gcbLeague14.DropDownStyle = ComboBoxStyle.DropDownList
         gcbLeague14.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
@@ -1318,7 +1298,7 @@ Partial Class Form1
         gcbLeague14.ItemHeight = 30
         gcbLeague14.Location = New Point(206, 79)
         gcbLeague14.Name = "gcbLeague14"
-        gcbLeague14.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        gcbLeague14.ShadowDecoration.CustomizableEdges = CustomizableEdges38
         gcbLeague14.Size = New Size(140, 36)
         gcbLeague14.TabIndex = 13
         ' 
@@ -1386,7 +1366,7 @@ Partial Class Form1
         gCBtnDisplay15.HoverState.FillColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
         gCBtnDisplay15.Location = New Point(522, 73)
         gCBtnDisplay15.Name = "gCBtnDisplay15"
-        gCBtnDisplay15.ShadowDecoration.CustomizableEdges = CustomizableEdges41
+        gCBtnDisplay15.ShadowDecoration.CustomizableEdges = CustomizableEdges39
         gCBtnDisplay15.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         gCBtnDisplay15.Size = New Size(73, 71)
         gCBtnDisplay15.TabIndex = 10
@@ -1404,65 +1384,6 @@ Partial Class Form1
         No16.TabIndex = 20
         No16.Text = "No16"
         No16.UseVisualStyleBackColor = True
-        ' 
-        ' Guna2Elipse1
-        ' 
-        Guna2Elipse1.BorderRadius = 10
-        Guna2Elipse1.TargetControl = Me
-        ' 
-        ' Guna2DragControl1
-        ' 
-        Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
-        Guna2DragControl1.TargetControl = Me
-        Guna2DragControl1.UseTransparentDrag = True
-        ' 
-        ' Guna2ShadowForm1
-        ' 
-        Guna2ShadowForm1.TargetForm = Me
-        ' 
-        ' Guna2PictureBox1
-        ' 
-        Guna2PictureBox1.BackColor = Color.Transparent
-        Guna2PictureBox1.BackgroundImage = CType(resources.GetObject("Guna2PictureBox1.BackgroundImage"), Image)
-        Guna2PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges44
-        Guna2PictureBox1.ErrorImage = Nothing
-        Guna2PictureBox1.FillColor = Color.Transparent
-        Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.InitialImage = Nothing
-        Guna2PictureBox1.Location = New Point(757, 12)
-        Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges45
-        Guna2PictureBox1.Size = New Size(13, 12)
-        Guna2PictureBox1.TabIndex = 1
-        Guna2PictureBox1.TabStop = False
-        ' 
-        ' Guna2PictureBox2
-        ' 
-        Guna2PictureBox2.BackColor = Color.Transparent
-        Guna2PictureBox2.BackgroundImage = CType(resources.GetObject("Guna2PictureBox2.BackgroundImage"), Image)
-        Guna2PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        Guna2PictureBox2.CustomizableEdges = CustomizableEdges42
-        Guna2PictureBox2.ErrorImage = Nothing
-        Guna2PictureBox2.FillColor = Color.Transparent
-        Guna2PictureBox2.ImageRotate = 0F
-        Guna2PictureBox2.InitialImage = Nothing
-        Guna2PictureBox2.Location = New Point(724, 12)
-        Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges43
-        Guna2PictureBox2.Size = New Size(16, 24)
-        Guna2PictureBox2.TabIndex = 2
-        Guna2PictureBox2.TabStop = False
-        ' 
-        ' Guna2HtmlLabel1
-        ' 
-        Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Guna2HtmlLabel1.Location = New Point(60, 39)
-        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(96, 27)
-        Guna2HtmlLabel1.TabIndex = 3
-        Guna2HtmlLabel1.Text = "SA RUGBY"
         ' 
         ' glbPlayerHG16
         ' 
@@ -1496,11 +1417,87 @@ Partial Class Form1
         gCBtnHighPts16.HoverState.FillColor = Color.FromArgb(CByte(27), CByte(56), CByte(56))
         gCBtnHighPts16.Location = New Point(532, 80)
         gCBtnHighPts16.Name = "gCBtnHighPts16"
-        gCBtnHighPts16.ShadowDecoration.CustomizableEdges = CustomizableEdges46
+        gCBtnHighPts16.ShadowDecoration.CustomizableEdges = CustomizableEdges40
         gCBtnHighPts16.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         gCBtnHighPts16.Size = New Size(73, 71)
         gCBtnHighPts16.TabIndex = 13
         gCBtnHighPts16.Text = "Display Player"
+        ' 
+        ' Guna2Elipse1
+        ' 
+        Guna2Elipse1.BorderRadius = 10
+        Guna2Elipse1.TargetControl = Me
+        ' 
+        ' Guna2DragControl1
+        ' 
+        Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Guna2DragControl1.TargetControl = Me
+        Guna2DragControl1.UseTransparentDrag = True
+        ' 
+        ' Guna2ShadowForm1
+        ' 
+        Guna2ShadowForm1.TargetForm = Me
+        ' 
+        ' Guna2PictureBox1
+        ' 
+        Guna2PictureBox1.BackColor = Color.Transparent
+        Guna2PictureBox1.BackgroundImage = CType(resources.GetObject("Guna2PictureBox1.BackgroundImage"), Image)
+        Guna2PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges43
+        Guna2PictureBox1.ErrorImage = Nothing
+        Guna2PictureBox1.FillColor = Color.Transparent
+        Guna2PictureBox1.ImageRotate = 0F
+        Guna2PictureBox1.InitialImage = Nothing
+        Guna2PictureBox1.Location = New Point(757, 12)
+        Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges44
+        Guna2PictureBox1.Size = New Size(13, 12)
+        Guna2PictureBox1.TabIndex = 1
+        Guna2PictureBox1.TabStop = False
+        ' 
+        ' Guna2PictureBox2
+        ' 
+        Guna2PictureBox2.BackColor = Color.Transparent
+        Guna2PictureBox2.BackgroundImage = CType(resources.GetObject("Guna2PictureBox2.BackgroundImage"), Image)
+        Guna2PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges41
+        Guna2PictureBox2.ErrorImage = Nothing
+        Guna2PictureBox2.FillColor = Color.Transparent
+        Guna2PictureBox2.ImageRotate = 0F
+        Guna2PictureBox2.InitialImage = Nothing
+        Guna2PictureBox2.Location = New Point(724, 12)
+        Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges42
+        Guna2PictureBox2.Size = New Size(16, 24)
+        Guna2PictureBox2.TabIndex = 2
+        Guna2PictureBox2.TabStop = False
+        ' 
+        ' Guna2HtmlLabel1
+        ' 
+        Guna2HtmlLabel1.BackColor = Color.Transparent
+        Guna2HtmlLabel1.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel1.Location = New Point(60, 39)
+        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Guna2HtmlLabel1.Size = New Size(96, 27)
+        Guna2HtmlLabel1.TabIndex = 3
+        Guna2HtmlLabel1.Text = "SA RUGBY"
+        ' 
+        ' gcbAvgPts14
+        ' 
+        gcbAvgPts14.BackColor = Color.Transparent
+        gcbAvgPts14.CustomizableEdges = CustomizableEdges45
+        gcbAvgPts14.DrawMode = DrawMode.OwnerDrawFixed
+        gcbAvgPts14.DropDownStyle = ComboBoxStyle.DropDownList
+        gcbAvgPts14.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        gcbAvgPts14.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        gcbAvgPts14.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        gcbAvgPts14.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        gcbAvgPts14.ItemHeight = 30
+        gcbAvgPts14.Location = New Point(32, 79)
+        gcbAvgPts14.Name = "gcbAvgPts14"
+        gcbAvgPts14.ShadowDecoration.CustomizableEdges = CustomizableEdges46
+        gcbAvgPts14.Size = New Size(140, 36)
+        gcbAvgPts14.TabIndex = 18
         ' 
         ' Form1
         ' 
@@ -1633,7 +1630,7 @@ Partial Class Form1
     Friend WithEvents gcbLeague14 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents gtxtPtsAvg14 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2HtmlLabel15 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel14 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents glbl14 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents gbtnCalculate14 As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents lblPlayer15 As Label
     Friend WithEvents gCBtnDisplay15 As Guna.UI2.WinForms.Guna2CircleButton
@@ -1642,4 +1639,5 @@ Partial Class Form1
     Friend WithEvents glbPlayerHG16 As ListBox
     Friend WithEvents Label6 As Label
     Friend WithEvents gCBtnHighPts16 As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents gcbAvgPts14 As Guna.UI2.WinForms.Guna2ComboBox
 End Class
