@@ -18,6 +18,7 @@ Public Class Form1
         TabThree()
         TabFour()
         TabFive()
+        gcbLeague14.Items.AddRange(New String() {"Currie Cup", "SA Rugby"})
         LoadAveragesAbove3()
     End Sub
 
