@@ -134,7 +134,7 @@ Partial Class Form1
         Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         glbPlayers14 = New ListBox()
         No15 = New TabPage()
-        ListBox2 = New ListBox()
+        glbPtsAvg15 = New ListBox()
         lblPlayer15 = New Label()
         gCBtnDisplay15 = New Guna.UI2.WinForms.Guna2CircleButton()
         No16 = New TabPage()
@@ -1343,7 +1343,7 @@ Partial Class Form1
         ' 
         ' No15
         ' 
-        No15.Controls.Add(ListBox2)
+        No15.Controls.Add(glbPtsAvg15)
         No15.Controls.Add(lblPlayer15)
         No15.Controls.Add(gCBtnDisplay15)
         No15.Location = New Point(4, 44)
@@ -1354,14 +1354,14 @@ Partial Class Form1
         No15.Text = "No15"
         No15.UseVisualStyleBackColor = True
         ' 
-        ' ListBox2
+        ' glbPtsAvg15
         ' 
-        ListBox2.FormattingEnabled = True
-        ListBox2.ItemHeight = 15
-        ListBox2.Location = New Point(229, 80)
-        ListBox2.Name = "ListBox2"
-        ListBox2.Size = New Size(245, 64)
-        ListBox2.TabIndex = 12
+        glbPtsAvg15.FormattingEnabled = True
+        glbPtsAvg15.ItemHeight = 15
+        glbPtsAvg15.Location = New Point(229, 80)
+        glbPtsAvg15.Name = "glbPtsAvg15"
+        glbPtsAvg15.Size = New Size(245, 64)
+        glbPtsAvg15.TabIndex = 12
         ' 
         ' lblPlayer15
         ' 
@@ -1638,7 +1638,7 @@ Partial Class Form1
     Friend WithEvents lblPlayer15 As Label
     Friend WithEvents gCBtnDisplay15 As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents gtxtHighAvg15 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents glbPtsAvg15 As ListBox
     Friend WithEvents glbPlayerHG16 As ListBox
     Friend WithEvents Label6 As Label
     Friend WithEvents gCBtnHighPts16 As Guna.UI2.WinForms.Guna2CircleButton

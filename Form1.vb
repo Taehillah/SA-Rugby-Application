@@ -429,6 +429,7 @@ Public Class Form1
         End If
     End Sub
 
+    'Tab 14
     Private Sub gtxtAvgPts14_TextChanged(sender As Object, e As EventArgs) Handles gtxtAvgPts14.TextChanged
         ' Validate the input for average points
         Dim inputText As String = gtxtAvgPts14.Text
@@ -447,7 +448,7 @@ Public Class Form1
             End If
         Else
             ' Handle invalid input (non-numeric)
-            MessageBox.Show("Please enter a valid numeric value for average points.")
+            'MessageBox.Show("Please enter a valid numeric value for average points.")
             gtxtAvgPts14.Text = ""
         End If
     End Sub
@@ -497,8 +498,8 @@ Public Class Form1
             ' Define a query to fetch players who meet the criteria
             Dim query As String = "SELECT Player FROM Players " &
                                   "WHERE Team IN (SELECT Team FROM Teams WHERE League = @League) " &
-                                  "AND (Points * 1.0 / Games) > @AveragePoints " &
-                                  "ORDER BY Player"
+                                  "AND (Points * 1.0 / Games) > @AveragePoints "
+            '   "ORDER BY Player"
 
             Dim command As New OleDbCommand(query, connection)
             command.Parameters.AddWithValue("@League", selectedLeague)
@@ -521,5 +522,33 @@ Public Class Form1
         Else
             MessageBox.Show("Please enter a valid numeric value for average points.")
         End If
+    End Sub
+
+    'Tab15
+    Private Sub gCBtnDisplay15_Click(sender As Object, e As EventArgs) Handles gCBtnDisplay15.Click
+        ' Define a query to fetch player(s) in the Currie Cup with the highest points average
+        Dim query As String = "SELECT Player, AVG(Points * 1.0 / Games) AS AveragePoints " &
+                              "FROM Players " &
+                              "WHERE Team IN (SELECT Team FROM Teams WHERE League = 'Currie Cup') " &
+                              "GROUP BY Player " &
+                              "HAVING AVG(Points * 1.0 / Games) = (SELECT MAX(AVG(Points * 1.0 / Games)) " &
+                              "FROM Players WHERE Team IN (SELECT Team FROM Teams WHERE League = 'Currie Cup')) " &
+                              "ORDER BY Player"
+
+        Dim command As New OleDbCommand(query, connection)
+        Dim adapter As New OleDbDataAdapter(command)
+        Dim dataTable As New DataTable()
+
+        Try
+            adapter.Fill(dataTable)
+            glbPtsAvg15.Items.Clear()
+
+            For Each row As DataRow In dataTable.Rows
+                Dim playerName As String = row("Player").ToString()
+                glbPtsAvg15.Items.Add(playerName)
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
     End Sub
 End Class
