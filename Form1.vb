@@ -17,7 +17,6 @@ Public Class Form1
         TabTwo()
         TabThree()
         TabFour()
-        TabFive()
         gcbLeague14.Items.AddRange(New String() {"Currie Cup", "SA Rugby"})
         LoadAveragesAbove3()
     End Sub
@@ -113,6 +112,8 @@ Public Class Form1
         reader.Close()
     End Sub
 
+    'Tab 4 
+    'The tab is loaded when the form loads
     Private Sub TabFour()
         ' Tab Number Four Queries
         Dim query As String = "SELECT Player FROM Players WHERE (Points * 1.0 / Games) = (SELECT MAX(Points * 1.0 / Games) FROM Players)"
@@ -129,10 +130,8 @@ Public Class Form1
         reader.Close()
     End Sub
 
-    Private Sub TabFive()
 
-    End Sub
-
+    'Tab 5
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles glbHighAvg15.SelectedIndexChanged
         If glbHighAvg15.SelectedIndex <> -1 Then
             Dim selectedTeamName As String = glbHighAvg15.SelectedItem.ToString()
@@ -155,6 +154,8 @@ Public Class Form1
         End If
     End Sub
 
+
+    'Tab6
     Private Sub LoadAveragesAbove3()
         Dim query As String = "SELECT DISTINCT AVG(Points * 1.0 / Games) AS AveragePoints " &
                               "FROM Players " &
@@ -192,7 +193,7 @@ Public Class Form1
         command.Parameters.AddWithValue("@Average", average)
         Dim adapter As New OleDbDataAdapter(command)
         Dim dataTable As New DataTable()
-
+        'The code below fills the datagridview with data
         Try
             adapter.Fill(dataTable)
             gDGVTeam6.DataSource = dataTable
@@ -201,6 +202,9 @@ Public Class Form1
         End Try
     End Sub
 
+
+    'Tab 7 Code
+    'The code below calculates the average points in Currie Cup using an event handler
     Private Sub gCBtn7_Click(sender As Object, e As EventArgs) Handles gCBtn7.Click
         Dim averagePoints As Double = CalculateAveragePointsInCurrieCup()
         gtxtPts7.Text = averagePoints.ToString("0.00")
@@ -232,11 +236,11 @@ Public Class Form1
     End Sub
 
 
+    'Tab 8
     Private Sub gCBtnTotal8_Click(sender As Object, e As EventArgs) Handles gCBtnTotal8.Click
         Dim totalPoints As Integer = CalculateTotalPointsInCurrieCup()
         gtxtTotalPts8.Text = totalPoints.ToString()
     End Sub
-
     Private Function CalculateTotalPointsInCurrieCup() As Integer
         Dim query As String = "SELECT SUM(Points) AS TotalPoints " &
                               "FROM Teams " &
@@ -252,22 +256,23 @@ Public Class Form1
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
-
-        Return 0 ' Return 0 if there's an error or no result
+        'The below code returns 0 if theres errors
+        Return 0
     End Function
 
+
+    'Tab9
     Private Sub gCBtnPlayers9_Click(sender As Object, e As EventArgs) Handles gCBtnPlayers9.Click
         Dim playerCount As Integer = CountCurrieCupPlayers()
         gtxtPlayers9.Text = playerCount.ToString()
     End Sub
-
     Private Function CountCurrieCupPlayers() As Integer
         Dim query As String = "SELECT COUNT(*) AS PlayerCount " &
                               "FROM Players P " &
                               "WHERE EXISTS (SELECT 1 FROM Teams T WHERE T.Team = P.Team AND T.League = 'Currie Cup')"
 
         Dim command As New OleDbCommand(query, connection)
-
+        'I validate the database 
         Try
             Dim result As Object = command.ExecuteScalar()
             If result IsNot Nothing AndAlso Not IsDBNull(result) Then
@@ -276,16 +281,19 @@ Public Class Form1
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
-
-        Return 0 'If there are errors, the function returns 0
+        'The below code returns 0 if theres errors
+        Return 0
     End Function
 
+
+    'Tab10
+    'The entire code is enclosed within the btn event handler
     Private Sub gCBtnBloem10_Click(sender As Object, e As EventArgs) Handles gCBtnBloem10.Click
-        Dim playerCount As Integer = CountBloemfonteinPlayers()
+        Dim playerCount As Integer = CountBloemPlayers()
         gtxtBloem10.Text = playerCount.ToString()
     End Sub
-
-    Private Function CountBloemfonteinPlayers() As Integer
+    'The sql query within a count bloem players
+    Private Function CountBloemPlayers() As Integer
         Dim query As String = "SELECT COUNT(*) AS PlayerCount " &
                               "FROM Players P " &
                               "WHERE EXISTS (SELECT 1 FROM Teams T WHERE T.Team = P.Team AND T.Location = 'Bloemfontein')"
@@ -300,9 +308,11 @@ Public Class Form1
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
-
-        Return 0 ' Return 0 if there's an error or no result
+        ' The code below returns 0 if there's an error or no result
+        Return 0
     End Function
+
+
     'Tab11
     Private Sub RadioButton_CheckedChanged11(sender As Object, e As EventArgs) Handles gRBtnCurrieCup11.CheckedChanged, gRBtnSARugby11.CheckedChanged
         If gRBtnCurrieCup11.Checked Then
@@ -311,7 +321,7 @@ Public Class Form1
             DisplayTeamsByLeague("SA Rugby")
         End If
     End Sub
-
+    'The code below displays according to the sql query
     Private Sub DisplayTeamsByLeague(league As String)
         Dim query As String = "SELECT Team, AVG(Points * 1.0 / Games) AS AveragePoints " &
                               "FROM Teams " &
@@ -323,7 +333,7 @@ Public Class Form1
         command.Parameters.AddWithValue("@League", league)
         Dim adapter As New OleDbDataAdapter(command)
         Dim dataTable As New DataTable()
-
+        'This below code populates the datagridview
         Try
             adapter.Fill(dataTable)
             gDGVTeams11.DataSource = dataTable
@@ -332,6 +342,9 @@ Public Class Form1
         End Try
     End Sub
 
+
+    'Tab12
+    'The code below checks which radio button is checked
     Private Sub RadioButton_CheckedChanged12(sender As Object, e As EventArgs) Handles gRBtnCurrieCup12.CheckedChanged, gRBtnSARugby12.CheckedChanged
         If gRBtnCurrieCup12.Checked Then
             DisplayPlayers("Currie Cup", 40)
@@ -339,7 +352,7 @@ Public Class Form1
             DisplayPlayers("SA Rugby", 40)
         End If
     End Sub
-
+    'The code below displays according to the sql query
     Private Sub DisplayPlayers(league As String, minPoints As Integer)
         Dim query As String = "SELECT Players.Player, Players.Points, Teams.Stadium, AVG(Players.Points * 1.0 / Players.Games) AS AveragePoints " &
                               "FROM Players " &
@@ -363,16 +376,16 @@ Public Class Form1
     End Sub
 
 
-
+    'Tab13
+    'This code selects the player with the team avg
     Private Sub glbSARUs13_SelectedIndexChanged(sender As Object, e As EventArgs) Handles glbSARUs13.SelectedIndexChanged
         If glbSARUs13.SelectedIndex <> -1 Then
             Dim selectedTeamName As String = glbSARUs13.SelectedItem.ToString()
             DisplayPlayersAboveTeamAverage(selectedTeamName)
         End If
     End Sub
-
+    'Function with a Query to collect points
     Private Sub DisplayPlayersAboveTeamAverage(teamName As String)
-        ' First, get the team's points average
         Dim teamAverageQuery As String = "SELECT AVG(Points * 1.0 / Games) AS TeamAverage FROM Players WHERE Team = @TeamName"
         Dim teamAverageCommand As New OleDbCommand(teamAverageQuery, connection)
         teamAverageCommand.Parameters.AddWithValue("@TeamName", teamName)
@@ -388,7 +401,7 @@ Public Class Form1
             MessageBox.Show("Error: " & ex.Message)
         End Try
 
-        ' Then, get players whose points average is greater than the team's points average
+        'I get the players whose points average is greater than the team's points average
         Dim query As String = "SELECT Player, AVG(Points * 1.0 / Games) AS PlayerAverage " &
                               "FROM Players WHERE Team = @TeamName " &
                               "GROUP BY Player " &
@@ -415,30 +428,27 @@ Public Class Form1
         End Try
     End Sub
 
-    'Tab14
 
+    'Tab14
     Private Sub gcbLeague14_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gcbLeague14.SelectedIndexChanged
-        ' Check the selected league
+        'Confirms the selected league as a string
         Dim selectedLeague As String = gcbLeague14.SelectedItem.ToString()
 
-        ' Enable or disable the TextBox based on the selected league
+        ' Here I disabled the text box if the user doesnt select the league
         If selectedLeague = "Currie Cup" OrElse selectedLeague = "SA Rugby" Then
             gtxtAvgPts14.Enabled = True
         Else
             gtxtAvgPts14.Enabled = False
         End If
     End Sub
-
-    'Tab 14
     Private Sub gtxtAvgPts14_TextChanged(sender As Object, e As EventArgs) Handles gtxtAvgPts14.TextChanged
-        ' Validate the input for average points
+        ' Validates the input for average points
         Dim inputText As String = gtxtAvgPts14.Text
-
-        ' Try parsing the input as a Double
+        'The code that Converts the text into a double
         If Double.TryParse(inputText, Nothing) Then
             Dim averagePoints As Double = Double.Parse(inputText)
 
-            ' Check if the value is within the valid range (0 to 10)
+            'This code validates the min and max
             If averagePoints < 0 Then
                 MessageBox.Show("Average points cannot be less than 0.")
                 gtxtAvgPts14.Text = "0"
@@ -447,37 +457,23 @@ Public Class Form1
                 gtxtAvgPts14.Text = "10"
             End If
         Else
-            ' Handle invalid input (non-numeric)
-            'MessageBox.Show("Please enter a valid numeric value for average points.")
+            'I removed the error or validation msg before the user enters input
             gtxtAvgPts14.Text = ""
         End If
     End Sub
-
-
-
-
-
-    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
-        Application.Exit()
-    End Sub
-
-
-    Private Sub Guna2PictureBox2_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox2.Click
-        Me.WindowState = FormWindowState.Minimized
-    End Sub
-
+    'I enclosed the code for tab 14 inside the btn as an event handler
     Private Sub gbtnCalculate14_Click(sender As Object, e As EventArgs) Handles gbtnCalculate14.Click
-        ' Get the selected league from the ComboBox
+        'The code below collects the League's name from the selection
         Dim selectedLeague As String = gcbLeague14.SelectedItem.ToString()
 
-        ' Get the average points entered by the user
+        'The code below collects the average points from the user
         Dim averagePoints As Double
         If Double.TryParse(gtxtAvgPts14.Text, averagePoints) Then
-            ' Define a query to fetch players who meet the criteria
+
             Dim query As String = "SELECT Player FROM Players " &
                                   "WHERE Team IN (SELECT Team FROM Teams WHERE League = @League) " &
                                   "AND (Points * 1.0 / Games) > @AveragePoints " &
-              "ORDER BY Player"
+                                  "ORDER BY Player"
 
             Dim command As New OleDbCommand(query, connection)
             command.Parameters.AddWithValue("@League", selectedLeague)
@@ -501,7 +497,6 @@ Public Class Form1
             MessageBox.Show("Please enter a valid numeric value for average points.")
         End If
     End Sub
-
 
 
     'Tab15
@@ -532,6 +527,7 @@ Public Class Form1
         End Try
     End Sub
 
+
     'Tab16
     'The code below takes the player with the highest points in the SA Rugby league
     'I enclose the code inside the tab 16 button and an event handler
@@ -558,6 +554,21 @@ Public Class Form1
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
+    End Sub
+
+
+    'Exit Btn
+    'This code is for the custom exit button I made
+    'This is because I used the ellipse tool to remove the title bar
+    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
+        Application.Exit()
+    End Sub
+
+
+    'Minimize Btn
+    'This code is for minimizing the window from the custom btn I made
+    Private Sub Guna2PictureBox2_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox2.Click
+        Me.WindowState = FormWindowState.Minimized
     End Sub
 
 End Class
