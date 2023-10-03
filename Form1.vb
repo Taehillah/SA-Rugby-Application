@@ -466,28 +466,6 @@ Public Class Form1
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub gDGV2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gDGV2.CellContentClick
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub gtxtTotalPts8_TextChanged(sender As Object, e As EventArgs) Handles gtxtTotalPts8.TextChanged
-
-    End Sub
-
-    Private Sub ListBox1_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles glbPlayerHG16.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-    End Sub
-
-    Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs) Handles gCBtnHighPts16.Click
-    End Sub
-
     Private Sub gbtnCalculate14_Click(sender As Object, e As EventArgs) Handles gbtnCalculate14.Click
         ' Get the selected league from the ComboBox
         Dim selectedLeague As String = gcbLeague14.SelectedItem.ToString()
@@ -524,16 +502,16 @@ Public Class Form1
         End If
     End Sub
 
+
+
     'Tab15
     Private Sub gCBtnDisplay15_Click(sender As Object, e As EventArgs) Handles gCBtnDisplay15.Click
-        ' Define a query to fetch player(s) in the Currie Cup with the highest points average
-        Dim query As String = "SELECT Player, AVG(Points * 1.0 / Games) AS AveragePoints " &
+        ' Define a query to fetch the player(s) with the highest points in the Currie Cup
+        Dim query As String = "SELECT Player, MAX(Points) AS HighestPoints " &
                               "FROM Players " &
                               "WHERE Team IN (SELECT Team FROM Teams WHERE League = 'Currie Cup') " &
                               "GROUP BY Player " &
-                              "HAVING AVG(Points * 1.0 / Games) = (SELECT MAX(AVG(Points * 1.0 / Games)) " &
-                              "FROM Players WHERE Team IN (SELECT Team FROM Teams WHERE League = 'Currie Cup')) " &
-                              "ORDER BY Player"
+                              "HAVING MAX(Points) = (SELECT MAX(Points) FROM Players WHERE Team IN (SELECT Team FROM Teams WHERE League = 'Currie Cup'))"
 
         Dim command As New OleDbCommand(query, connection)
         Dim adapter As New OleDbDataAdapter(command)
@@ -551,4 +529,6 @@ Public Class Form1
             MessageBox.Show("Error: " & ex.Message)
         End Try
     End Sub
+
+
 End Class
