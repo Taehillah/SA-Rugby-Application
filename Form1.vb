@@ -415,6 +415,44 @@ Public Class Form1
         End Try
     End Sub
 
+    'Tab14
+
+    Private Sub gcbLeague14_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gcbLeague14.SelectedIndexChanged
+        ' Check the selected league
+        Dim selectedLeague As String = gcbLeague14.SelectedItem.ToString()
+
+        ' Enable or disable the TextBox based on the selected league
+        If selectedLeague = "Currie Cup" OrElse selectedLeague = "SA Rugby" Then
+            gtxtAvgPts14.Enabled = True
+        Else
+            gtxtAvgPts14.Enabled = False
+        End If
+    End Sub
+
+    Private Sub gtxtAvgPts14_TextChanged(sender As Object, e As EventArgs) Handles gtxtAvgPts14.TextChanged
+        ' Validate the input for average points
+        Dim inputText As String = gtxtAvgPts14.Text
+
+        ' Try parsing the input as a Double
+        If Double.TryParse(inputText, Nothing) Then
+            Dim averagePoints As Double = Double.Parse(inputText)
+
+            ' Check if the value is within the valid range (0 to 10)
+            If averagePoints < 0 Then
+                MessageBox.Show("Average points cannot be less than 0.")
+                gtxtAvgPts14.Text = "0"
+            ElseIf averagePoints > 10 Then
+                MessageBox.Show("Average points cannot be greater than 10.")
+                gtxtAvgPts14.Text = "10"
+            End If
+        Else
+            ' Handle invalid input (non-numeric)
+            MessageBox.Show("Please enter a valid numeric value for average points.")
+            gtxtAvgPts14.Text = ""
+        End If
+    End Sub
+
+
 
 
 
@@ -447,5 +485,41 @@ Public Class Form1
     End Sub
 
     Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs) Handles gCBtnHighPts16.Click
+    End Sub
+
+    Private Sub gbtnCalculate14_Click(sender As Object, e As EventArgs) Handles gbtnCalculate14.Click
+        ' Get the selected league from the ComboBox
+        Dim selectedLeague As String = gcbLeague14.SelectedItem.ToString()
+
+        ' Get the average points entered by the user
+        Dim averagePoints As Double
+        If Double.TryParse(gtxtAvgPts14.Text, averagePoints) Then
+            ' Define a query to fetch players who meet the criteria
+            Dim query As String = "SELECT Player FROM Players " &
+                                  "WHERE Team IN (SELECT Team FROM Teams WHERE League = @League) " &
+                                  "AND (Points * 1.0 / Games) > @AveragePoints " &
+                                  "ORDER BY Player"
+
+            Dim command As New OleDbCommand(query, connection)
+            command.Parameters.AddWithValue("@League", selectedLeague)
+            command.Parameters.AddWithValue("@AveragePoints", averagePoints)
+
+            Dim adapter As New OleDbDataAdapter(command)
+            Dim dataTable As New DataTable()
+
+            Try
+                adapter.Fill(dataTable)
+                glbPlayers14.Items.Clear()
+
+                For Each row As DataRow In dataTable.Rows
+                    Dim playerName As String = row("Player").ToString()
+                    glbPlayers14.Items.Add(playerName)
+                Next
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        Else
+            MessageBox.Show("Please enter a valid numeric value for average points.")
+        End If
     End Sub
 End Class
