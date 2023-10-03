@@ -42,25 +42,9 @@ Public Class Form1
 
 
 
-    Private Sub DisplayPlayers(teamName As String)
-        Dim query As String = "SELECT Player, AVG(Points * 1.0 / Games) AS AveragePoints " &
-                              "FROM Players WHERE Team = @TeamName " &
-                              "GROUP BY Player " &
-                              "ORDER BY AVG(Points * 1.0 / Games) DESC"
 
-        Dim command As New OleDbCommand(query, connection)
-        command.Parameters.AddWithValue("@TeamName", teamName)
-        Dim adapter As New OleDbDataAdapter(command)
-        Dim dataTable As New DataTable()
 
-        Try
-            adapter.Fill(dataTable)
-            gDGVTeams5.DataSource = dataTable
-        Catch ex As Exception
-            MessageBox.Show("Error: " & ex.Message)
-        End Try
-    End Sub
-
+    'Tab 1
     Private Sub TabOne()
         'Tab Number One Queries
         Dim query As String = "Select * FROM Teams"
@@ -77,6 +61,8 @@ Public Class Form1
         reader.Close()
     End Sub
 
+
+    'Tab 2
     Private Sub TabTwo()
         'Tab Number Two Queries
         Dim query As String = "SELECT Team, Stadium, AVG(Points * 1.0 / Games) AS AveragePoints FROM Teams GROUP BY Team, Stadium"
@@ -92,6 +78,8 @@ Public Class Form1
         End Try
     End Sub
 
+
+    'Tab 3
     Private Sub TabThree()
         ' Tab Number Three Queries
         Dim query As String = "SELECT Player FROM Players WHERE Points = (SELECT MAX(Points) FROM Players)"
@@ -148,6 +136,24 @@ Public Class Form1
         Else
             txtNo1HomeStadium.Text = ""
         End If
+    End Sub
+    Private Sub DisplayPlayers(teamName As String)
+        Dim query As String = "SELECT Player, AVG(Points * 1.0 / Games) AS AveragePoints " &
+                              "FROM Players WHERE Team = @TeamName " &
+                              "GROUP BY Player " &
+                              "ORDER BY AVG(Points * 1.0 / Games) DESC"
+
+        Dim command As New OleDbCommand(query, connection)
+        command.Parameters.AddWithValue("@TeamName", teamName)
+        Dim adapter As New OleDbDataAdapter(command)
+        Dim dataTable As New DataTable()
+
+        Try
+            adapter.Fill(dataTable)
+            gDGVTeams5.DataSource = dataTable
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
     End Sub
     Private Sub lbTeams5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbTeams5.SelectedIndexChanged
         If lbTeams5.SelectedIndex <> -1 Then
