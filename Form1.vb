@@ -36,17 +36,11 @@ Public Class Form1
             lbTeams5.Items.Add(teamName)
             glbSARUs13.Items.Add(teamName) 'just added
         End While
-
         reader.Close()
 
     End Sub
 
-    Private Sub lbTeams5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbTeams5.SelectedIndexChanged
-        If lbTeams5.SelectedIndex <> -1 Then
-            Dim selectedTeamName As String = lbTeams5.SelectedItem.ToString()
-            DisplayPlayers(selectedTeamName)
-        End If
-    End Sub
+
 
     Private Sub DisplayPlayers(teamName As String)
         Dim query As String = "SELECT Player, AVG(Points * 1.0 / Games) AS AveragePoints " &
@@ -153,6 +147,12 @@ Public Class Form1
             End Try
         Else
             txtNo1HomeStadium.Text = ""
+        End If
+    End Sub
+    Private Sub lbTeams5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbTeams5.SelectedIndexChanged
+        If lbTeams5.SelectedIndex <> -1 Then
+            Dim selectedTeamName As String = lbTeams5.SelectedItem.ToString()
+            DisplayPlayers(selectedTeamName)
         End If
     End Sub
 
