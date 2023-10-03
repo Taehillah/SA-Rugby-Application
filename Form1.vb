@@ -530,5 +530,30 @@ Public Class Form1
         End Try
     End Sub
 
+    'Tab16
+    Private Sub gCBtnHighPts16_Click(sender As Object, e As EventArgs) Handles gCBtnHighPts16.Click
+        ' Define a query to fetch the player(s) with the highest points in the SA Rugby League
+        Dim query As String = "SELECT Player, MAX(Points) AS HighestPoints " &
+                              "FROM Players " &
+                              "WHERE Team IN (SELECT Team FROM Teams WHERE League = 'SA Rugby') " &
+                              "GROUP BY Player " &
+                              "HAVING MAX(Points) = (SELECT MAX(Points) FROM Players WHERE Team IN (SELECT Team FROM Teams WHERE League = 'SA Rugby'))"
+
+        Dim command As New OleDbCommand(query, connection)
+        Dim adapter As New OleDbDataAdapter(command)
+        Dim dataTable As New DataTable()
+
+        Try
+            adapter.Fill(dataTable)
+            glbPlayerHG16.Items.Clear()
+
+            For Each row As DataRow In dataTable.Rows
+                Dim playerName As String = row("Player").ToString()
+                glbPlayerHG16.Items.Add(playerName)
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
 
 End Class
