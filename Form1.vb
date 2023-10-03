@@ -1,7 +1,6 @@
 ﻿Imports System.Data.OleDb
 
 Public Class Form1
-
     Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\imafo\Documents\School\ICT3611\Assign6_Database\Rugby.accdb;Persist Security Info=False"
     Dim connection As New OleDbConnection(connectionString)
     'Forms load supports the subs to load data when the form opens
@@ -21,11 +20,14 @@ Public Class Form1
         LoadAveragesAbove3()
     End Sub
 
+
+    'LoadTeams()
+    'The code below serves to load Teams data from the db to the lb 
     Private Sub LoadTeams()
         Dim query As String = "SELECT Team FROM Teams"
         Dim command As New OleDbCommand(query, connection)
         Dim reader As OleDbDataReader = command.ExecuteReader()
-
+        'lb cleared on load
         lbTeams5.Items.Clear()
         glbSARUs13.Items.Clear() 'just added
 
